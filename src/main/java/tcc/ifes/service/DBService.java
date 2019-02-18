@@ -12,7 +12,6 @@ import tcc.ifes.model.Item;
 import tcc.ifes.model.ItemTag;
 import tcc.ifes.model.Gerente;
 import tcc.ifes.model.Projeto;
-import tcc.ifes.model.Recomendacao;
 import tcc.ifes.model.Tag;
 import tcc.ifes.model.Usuario;
 import tcc.ifes.repositories.AvaliacaoRepository;
