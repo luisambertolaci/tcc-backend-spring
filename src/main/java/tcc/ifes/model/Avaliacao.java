@@ -112,6 +112,6 @@ public class Avaliacao implements Serializable{
 	
 	@Override
 	public String toString() {
-		return nota+"";
+		return nota+" "+item.getId()+"";
 	}
 }

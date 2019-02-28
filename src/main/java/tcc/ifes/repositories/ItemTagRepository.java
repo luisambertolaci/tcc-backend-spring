@@ -6,5 +6,7 @@ import tcc.ifes.model.ItemTag;
 import tcc.ifes.model.ItemTagPK;
 
 public interface ItemTagRepository extends JpaRepository<ItemTag, ItemTagPK> {
+	
+	
 
 }

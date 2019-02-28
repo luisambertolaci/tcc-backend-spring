@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import tcc.ifes.algoritmos.CriandoPerfis;
 import tcc.ifes.model.Avaliacao;
 import tcc.ifes.model.Recomendacao;
 import tcc.ifes.model.Usuario;
@@ -30,17 +31,25 @@ public class UsuarioResource {
 	@Autowired
 	private RecomendacaoService recomendacaoService;
 	
+	
 	@RequestMapping(method=RequestMethod.GET)
+	public CriandoPerfis findAll() {
+		CriandoPerfis perfil = new CriandoPerfis();
+		perfil.showUsuario();
+		return perfil;
+	}
+	
+	/*@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<Usuario>> findAll() {
 		List<Usuario> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 	
-	@RequestMapping(value="/{id}", method=RequestMethod.GET)
+	/*@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<Usuario> find(@PathVariable Integer id) {
 		Usuario obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
-	}
+	}*/
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Void> insert(@RequestBody Usuario obj) {

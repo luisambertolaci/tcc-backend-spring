@@ -75,5 +75,8 @@ public class ItemTag implements Serializable {
 		return true;
 	}
 	
-	
+	@Override
+	public String toString() {
+		return getTag().toString();
+	}
 }
