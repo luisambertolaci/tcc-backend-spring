@@ -3,6 +3,7 @@ package tcc.ifes.algoritmos;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.aspectj.weaver.patterns.ITokenSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 
@@ -10,6 +11,7 @@ import tcc.ifes.model.Avaliacao;
 import tcc.ifes.model.ItemTag;
 import tcc.ifes.model.Usuario;
 import tcc.ifes.repositories.AvaliacaoRepository;
+import tcc.ifes.repositories.ItemRepository;
 import tcc.ifes.repositories.ItemTagRepository;
 import tcc.ifes.repositories.TagRepository;
 import tcc.ifes.repositories.UsuarioRepository;
@@ -28,6 +30,9 @@ public class CriandoPerfis {
 
 	@Autowired
 	TagRepository tagRepository;
+
+	@Autowired
+	ItemRepository itemRepository;
 
 	private List<ItemTag> tags = new ArrayList<ItemTag>();
 	private List<Avaliacao> avaliacao = new ArrayList<Avaliacao>();
@@ -54,10 +59,9 @@ public class CriandoPerfis {
 
 		Usuario usuario = usuarioRepository.findOne(1);
 		avaliacao = avaliacaoRepository.findByUsuario(usuario);
-		int linhas = avaliacao.size() + 1;
+		int linhas = itemRepository.findAll().size() + 1;
 		int colunas = tagRepository.findAll().size();
 		float matriz[][] = new float[linhas][colunas];
-		int j = 1;
 		int i = 0;
 		System.out.println("linhas : " + linhas + " colunas : " + colunas);
 		for (i = 0; i < colunas; i++) {
@@ -66,24 +70,21 @@ public class CriandoPerfis {
 
 			// System.out.println();
 		}
-		for (i = 0; i < linhas-1; i++) {
+		for (i = 0; i < avaliacao.size(); i++) {
 			for (ItemTag item : avaliacao.get(i).getItem().getItens()) {
 				float nota = avaliacao.get(i).getNota();
 				item.setTag(tagRepository.findOne(item.getTag().getId()));
-				matriz[j][item.getTag().getId() - 1] = nota;
-				System.out.println("linha :" + j + " coluna :" + (item.getTag().getId() - 1) + " "
-						+ matriz[j][item.getTag().getId() - 1]);
-			}
-			j++;
-			if (j == linhas) {
-				for (int p = 0; p < linhas; p++) {
-					for (int k = 0; k < colunas; k++) {
-						System.out.print(matriz[p][k] + " ");
-					}
-					System.out.println();
-				}
+				matriz[item.getItem().getId()][item.getTag().getId() - 1] = nota;
+				System.out.println("linha :" + item.getItem().getId() + " coluna :" + (item.getTag().getId() - 1) + " "
+						+ matriz[item.getItem().getId()][item.getTag().getId() - 1]);
 			}
 
+		}
+		for (int p = 0; p < linhas; p++) {
+			for (int k = 0; k < colunas; k++) {
+				System.out.print(matriz[p][k] + " ");
+			}
+			System.out.println();
 		}
 	}
 }
