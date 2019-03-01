@@ -28,6 +28,7 @@ public class CriandoPerfis {
 
 	@Autowired
 	TagRepository tagRepository;
+
 	private List<ItemTag> tags = new ArrayList<ItemTag>();
 	private List<Avaliacao> avaliacao = new ArrayList<Avaliacao>();
 
@@ -37,7 +38,7 @@ public class CriandoPerfis {
 		avaliacao = avaliacaoRepository.findByUsuario(usuario);
 		System.out.println(usuario + " " + avaliacao);
 		for (int i = 0; i < avaliacao.size(); i++) {
-			for(ItemTag item : avaliacao.get(i).getItem().getItens()) {
+			for (ItemTag item : avaliacao.get(i).getItem().getItens()) {
 				item.setTag(tagRepository.findOne(item.getTag().getId()));
 				item.setItem(avaliacao.get(i).getItem());
 				System.out.println(item);
@@ -48,9 +49,41 @@ public class CriandoPerfis {
 
 		return usuario;
 	}
-	
-	
-	public void criandoMatriz() {
-	}
 
+	public void criandoMatriz() {
+
+		Usuario usuario = usuarioRepository.findOne(1);
+		avaliacao = avaliacaoRepository.findByUsuario(usuario);
+		int linhas = avaliacao.size() + 1;
+		int colunas = tagRepository.findAll().size();
+		float matriz[][] = new float[linhas][colunas];
+		int j = 1;
+		int i = 0;
+		System.out.println("linhas : " + linhas + " colunas : " + colunas);
+		for (i = 0; i < colunas; i++) {
+			matriz[0][i] = tagRepository.getOne(i + 1).getId();
+			System.out.println(matriz[0][i]);
+
+			// System.out.println();
+		}
+		for (i = 0; i < linhas-1; i++) {
+			for (ItemTag item : avaliacao.get(i).getItem().getItens()) {
+				float nota = avaliacao.get(i).getNota();
+				item.setTag(tagRepository.findOne(item.getTag().getId()));
+				matriz[j][item.getTag().getId() - 1] = nota;
+				System.out.println("linha :" + j + " coluna :" + (item.getTag().getId() - 1) + " "
+						+ matriz[j][item.getTag().getId() - 1]);
+			}
+			j++;
+			if (j == linhas) {
+				for (int p = 0; p < linhas; p++) {
+					for (int k = 0; k < colunas; k++) {
+						System.out.print(matriz[p][k] + " ");
+					}
+					System.out.println();
+				}
+			}
+
+		}
+	}
 }

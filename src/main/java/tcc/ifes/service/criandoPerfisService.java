@@ -17,4 +17,8 @@ public class criandoPerfisService {
 		Usuario obj = criando.showUsuario();
 		return obj;
 	}
+	
+	public void matriz() {
+		criando.criandoMatriz();
+	}
 }

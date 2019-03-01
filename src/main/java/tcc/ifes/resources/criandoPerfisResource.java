@@ -20,10 +20,12 @@ public class criandoPerfisResource {
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<Usuario> findAll() {
 		Usuario list = service.showUsuario();
-		if (list == null) {
-			throw new ObjectNotFoundException("deu merda aq");
-		}
 		return ResponseEntity.ok().body(list);
+	}
+	
+	@RequestMapping(value ="/matriz", method = RequestMethod.GET)
+	public void matriz() {
+		service.matriz();
 	}
 
 }
