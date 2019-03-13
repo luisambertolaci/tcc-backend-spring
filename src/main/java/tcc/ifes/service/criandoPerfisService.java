@@ -12,7 +12,6 @@ public class criandoPerfisService {
 	@Autowired
 	private CriandoPerfis criando;
 	
-	
 	public Usuario showUsuario() {
 		Usuario obj = criando.showUsuario();
 		return obj;

@@ -3,9 +3,8 @@ package tcc.ifes.algoritmos;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.aspectj.weaver.patterns.ITokenSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Service;
 
 import tcc.ifes.model.Avaliacao;
 import tcc.ifes.model.ItemTag;
@@ -16,7 +15,7 @@ import tcc.ifes.repositories.ItemTagRepository;
 import tcc.ifes.repositories.TagRepository;
 import tcc.ifes.repositories.UsuarioRepository;
 
-@Configuration
+@Service
 public class CriandoPerfis {
 
 	@Autowired
@@ -57,7 +56,7 @@ public class CriandoPerfis {
 
 	public void criandoMatriz() {
 
-		Usuario usuario = usuarioRepository.findOne(1);
+		Usuario usuario = usuarioRepository.findOne(3);
 		avaliacao = avaliacaoRepository.findByUsuario(usuario);
 		int linhas = itemRepository.findAll().size() + 1;
 		int colunas = tagRepository.findAll().size();
