@@ -7,8 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import tcc.ifes.model.Usuario;
-import tcc.ifes.service.criandoPerfisService;
-import tcc.ifes.services.exceptions.ObjectNotFoundException;
+import tcc.ifes.service.algoritmos.criandoPerfisService;
 
 @RestController
 @RequestMapping(value = "/perfis")
@@ -24,8 +23,9 @@ public class criandoPerfisResource {
 	}
 	
 	@RequestMapping(value ="/matriz", method = RequestMethod.GET)
-	public void matriz() {
-		service.matriz();
+	public float[][] matriz() {
+		return service.matriz();
+		
 	}
 
 }
