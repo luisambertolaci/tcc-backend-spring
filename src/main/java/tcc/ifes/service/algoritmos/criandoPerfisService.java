@@ -7,11 +7,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import tcc.ifes.model.Avaliacao;
+import tcc.ifes.model.Item;
 import tcc.ifes.model.ItemTag;
 import tcc.ifes.model.Usuario;
 import tcc.ifes.repositories.AvaliacaoRepository;
 import tcc.ifes.repositories.ItemRepository;
 import tcc.ifes.repositories.ItemTagRepository;
+import tcc.ifes.repositories.ProjetoRepository;
 import tcc.ifes.repositories.TagRepository;
 import tcc.ifes.repositories.UsuarioRepository;
 
@@ -32,6 +34,9 @@ public class criandoPerfisService {
 
 	@Autowired
 	ItemRepository itemRepository;
+	
+	@Autowired
+	ProjetoRepository projetoRepository;
 
 	private List<ItemTag> tags = new ArrayList<ItemTag>();
 	private List<Avaliacao> avaliacao = new ArrayList<Avaliacao>();
@@ -54,10 +59,14 @@ public class criandoPerfisService {
 	}
 
 	public float[][] matriz() {
-		Usuario usuario = usuarioRepository.findOne(3);
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(2));
+		Usuario usuario = usuarioRepository.findOne(10);
 		avaliacao = avaliacaoRepository.findByUsuario(usuario);
-		int linhas = itemRepository.findAll().size() + 1;
+		
+		//int linhas = itemRepository.findAll().size() + 1;		
+		int linhas = lin.size() + 1;
 		int colunas = tagRepository.findAll().size();
+		
 		float matriz[][] = new float[linhas][colunas];
 		int i = 0;
 		System.out.println("linhas : " + linhas + " colunas : " + colunas);
@@ -71,9 +80,9 @@ public class criandoPerfisService {
 			for (ItemTag item : avaliacao.get(i).getItem().getItens()) {
 				float nota = avaliacao.get(i).getNota();
 				item.setTag(tagRepository.findOne(item.getTag().getId()));
-				matriz[item.getItem().getId()][item.getTag().getId() - 1] = nota;
+				matriz[lin.indexOf(item.getItem())+1][item.getTag().getId() - 1] = nota;
 				System.out.println("linha :" + item.getItem().getId() + " coluna :" + (item.getTag().getId() - 1) + " "
-						+ matriz[item.getItem().getId()][item.getTag().getId() - 1]);
+						+ matriz[lin.indexOf(item.getItem())+1][item.getTag().getId() - 1]);
 			}
 
 		}
