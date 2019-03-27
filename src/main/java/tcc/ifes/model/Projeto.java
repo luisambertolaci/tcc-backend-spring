@@ -37,9 +37,7 @@ public class Projeto implements Serializable {
 		this.id = id;
 		this.descricao = descricao;
 		this.data = data;
-		this.gerente = professor;
-		
-		
+		this.gerente = professor;	
 	}
 
 	public Integer getId() {

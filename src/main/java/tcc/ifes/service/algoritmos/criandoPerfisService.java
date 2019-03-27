@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import tcc.ifes.model.Avaliacao;
 import tcc.ifes.model.Item;
 import tcc.ifes.model.ItemTag;
+import tcc.ifes.model.Tag;
 import tcc.ifes.model.Usuario;
 import tcc.ifes.repositories.AvaliacaoRepository;
 import tcc.ifes.repositories.ItemRepository;
@@ -34,7 +35,7 @@ public class criandoPerfisService {
 
 	@Autowired
 	ItemRepository itemRepository;
-	
+
 	@Autowired
 	ProjetoRepository projetoRepository;
 
@@ -59,14 +60,15 @@ public class criandoPerfisService {
 	}
 
 	public float[][] matriz() {
-		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(2));
-		Usuario usuario = usuarioRepository.findOne(10);
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(1));
+		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(1));
+		Usuario usuario = usuarioRepository.findOne(2);
 		avaliacao = avaliacaoRepository.findByUsuario(usuario);
-		
-		//int linhas = itemRepository.findAll().size() + 1;		
+
+		// int linhas = itemRepository.findAll().size() + 1;
 		int linhas = lin.size() + 1;
-		int colunas = tagRepository.findAll().size();
-		
+		int colunas = col.size();
+
 		float matriz[][] = new float[linhas][colunas];
 		int i = 0;
 		System.out.println("linhas : " + linhas + " colunas : " + colunas);
@@ -80,9 +82,10 @@ public class criandoPerfisService {
 			for (ItemTag item : avaliacao.get(i).getItem().getItens()) {
 				float nota = avaliacao.get(i).getNota();
 				item.setTag(tagRepository.findOne(item.getTag().getId()));
-				matriz[lin.indexOf(item.getItem())+1][item.getTag().getId() - 1] = nota;
-				System.out.println("linha :" + item.getItem().getId() + " coluna :" + (item.getTag().getId() - 1) + " "
-						+ matriz[lin.indexOf(item.getItem())+1][item.getTag().getId() - 1]);
+				//matriz[lin.indexOf(item.getItem()) + 1][item.getTag().getId() - 1] = nota;
+				matriz[lin.indexOf(item.getItem()) + 1][col.indexOf(item.getTag())] = nota;
+				System.out.println("linha :" + item.getItem().getId() + " coluna :" + (col.indexOf(item.getTag())) + " "
+						+ matriz[lin.indexOf(item.getItem()) + 1][col.indexOf(item.getTag())]);
 			}
 
 		}
@@ -94,4 +97,60 @@ public class criandoPerfisService {
 		}
 		return matriz;
 	}
+
+	public List<Float> media() {
+		float[][] matriz = matriz();
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(1));
+		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(1));
+		
+		int linhas = lin.size() + 1;
+		int colunas = col.size();
+		float soma = 0.0f;
+		int z = 0;
+		
+		List<Float> somatorio = new ArrayList<Float>();
+		List<Float> media = new ArrayList<Float>();
+		
+		for (int p = 0; p < colunas; p++) {
+			for (int k = 1; k < linhas; k++) {
+				soma = soma + matriz[k][p];
+			}
+			somatorio.add(soma);
+			System.out.println(soma);
+			soma = 0.0f;
+		}
+		
+		for (int p = 0; p < colunas; p++) {
+			for (int k = 1; k < linhas; k++) {
+				if(matriz[k][p] != 0.0) {
+					z++;
+				}
+			}
+			float valor = somatorio.get(p) / z;
+			media.add(valor);
+			z = 0;
+		}
+		
+		return media;
+	}
+	
+	public List<Float> normalizacao(){
+		List<Float> media = media();
+		int colunas = media.size();
+		float maximo = 0.0f;
+		List<Float> normalizacao = new ArrayList<Float>();
+		
+		for(int p = 0; p < colunas; p++) {
+			if(media.get(p) > maximo) {
+				maximo = media.get(p);
+			}
+		}
+		
+		for(int p = 0; p < colunas; p++) {
+			normalizacao.add(media.get(p) / maximo);
+		}
+		
+		return normalizacao;
+	}
+	
 }

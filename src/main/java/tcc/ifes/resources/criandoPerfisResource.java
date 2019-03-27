@@ -1,5 +1,7 @@
 package tcc.ifes.resources;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,6 +28,17 @@ public class criandoPerfisResource {
 	public float[][] matriz() {
 		return service.matriz();
 		
+	}
+	
+	@RequestMapping(value ="/media", method = RequestMethod.GET)
+	public List<Float> media() {
+		return service.media();
+		
+	}
+	
+	@RequestMapping(value ="/normalizacao", method = RequestMethod.GET)
+	public List<Float> normalizacao(){
+		return service.normalizacao();
 	}
 
 }

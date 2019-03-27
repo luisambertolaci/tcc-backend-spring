@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Tag implements Serializable {
@@ -18,13 +20,18 @@ public class Tag implements Serializable {
 	
 	private String tag;
 	
+	@ManyToOne
+	@JoinColumn(name = "projeto_id")
+	private Projeto projeto;
+	
 	public Tag() {
 		
 	}
 	
-	public Tag(Integer id, String tag) {
+	public Tag(Integer id, String tag, Projeto projeto) {
 		this.id = id;
 		this.tag = tag;
+		this.projeto = projeto;
 	}
 
 	public Integer getId() {
@@ -41,6 +48,14 @@ public class Tag implements Serializable {
 
 	public void setTag(String tag) {
 		this.tag = tag;
+	}
+	
+	public Projeto getProjeto() {
+		return projeto;
+	}
+
+	public void setProjeto(Projeto projeto) {
+		this.projeto = projeto;
 	}
 
 	@Override
