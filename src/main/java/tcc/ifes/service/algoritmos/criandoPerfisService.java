@@ -39,53 +39,29 @@ public class criandoPerfisService {
 	@Autowired
 	ProjetoRepository projetoRepository;
 
-	private List<ItemTag> tags = new ArrayList<ItemTag>();
 	private List<Avaliacao> avaliacao = new ArrayList<Avaliacao>();
-
-	public Usuario showUsuario() {
-		Usuario usuario = usuarioRepository.findOne(1);
-		avaliacao = avaliacaoRepository.findByUsuario(usuario);
-		System.out.println(usuario + " " + avaliacao);
-		for (int i = 0; i < avaliacao.size(); i++) {
-			for (ItemTag item : avaliacao.get(i).getItem().getItens()) {
-				item.setTag(tagRepository.findOne(item.getTag().getId()));
-				item.setItem(avaliacao.get(i).getItem());
-				System.out.println(item);
-				tags.add(item);
-			}
-		}
-		System.out.println(tags);
-
-		return usuario;
-	}
 
 	public float[][] matriz() {
 		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(1));
 		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(1));
-		Usuario usuario = usuarioRepository.findOne(2);
+		Usuario usuario = usuarioRepository.findOne(1);
 		avaliacao = avaliacaoRepository.findByUsuario(usuario);
 
-		// int linhas = itemRepository.findAll().size() + 1;
 		int linhas = lin.size() + 1;
 		int colunas = col.size();
 
 		float matriz[][] = new float[linhas][colunas];
 		int i = 0;
-		System.out.println("linhas : " + linhas + " colunas : " + colunas);
+		
 		for (i = 0; i < colunas; i++) {
 			matriz[0][i] = tagRepository.getOne(i + 1).getId();
-			System.out.println(matriz[0][i]);
-
-			// System.out.println();
 		}
+		
 		for (i = 0; i < avaliacao.size(); i++) {
 			for (ItemTag item : avaliacao.get(i).getItem().getItens()) {
 				float nota = avaliacao.get(i).getNota();
 				item.setTag(tagRepository.findOne(item.getTag().getId()));
-				//matriz[lin.indexOf(item.getItem()) + 1][item.getTag().getId() - 1] = nota;
 				matriz[lin.indexOf(item.getItem()) + 1][col.indexOf(item.getTag())] = nota;
-				System.out.println("linha :" + item.getItem().getId() + " coluna :" + (col.indexOf(item.getTag())) + " "
-						+ matriz[lin.indexOf(item.getItem()) + 1][col.indexOf(item.getTag())]);
 			}
 
 		}
@@ -116,7 +92,6 @@ public class criandoPerfisService {
 				soma = soma + matriz[k][p];
 			}
 			somatorio.add(soma);
-			System.out.println(soma);
 			soma = 0.0f;
 		}
 		
@@ -152,5 +127,32 @@ public class criandoPerfisService {
 		
 		return normalizacao;
 	}
+	
+	public List<Float> distanciaEuclidiana(){
+		List<Float> normalizacao = normalizacao();
+		int colunas = normalizacao.size();
+		float matriz[][] = matriz();
+		System.out.println(matriz.length);
+		float somaDistancia = 0.0f;
+		List<Float> distanciaEuclidiana = new ArrayList<>();
+		
+		for(int i = 1; i < matriz.length; i++) {
+			for(int c = 0; c < colunas; c++) {
+				if(matriz[i][c] != 0.0f) {
+					somaDistancia = somaDistancia + (float) Math.pow(normalizacao.get(c) - 1, 2);
+				}else {
+					somaDistancia = somaDistancia + (float) Math.pow(normalizacao.get(c), 2);
+				}
+				
+			}
+			somaDistancia = (float) Math.sqrt(somaDistancia);
+			distanciaEuclidiana.add(somaDistancia);	
+			somaDistancia = 0.0f;
+		}
+		
+		return distanciaEuclidiana;
+	}
+	
+	
 	
 }
