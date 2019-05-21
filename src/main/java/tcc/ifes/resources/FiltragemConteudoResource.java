@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import tcc.ifes.service.algoritmos.criandoPerfisService;
+import tcc.ifes.service.algoritmos.FiltragemConteudoService;
 
 @RestController
 @RequestMapping(value = "/perfis")
-public class criandoPerfisResource {
+public class FiltragemConteudoResource {
 
 	@Autowired
-	private criandoPerfisService service;
+	private FiltragemConteudoService service;
 
 	
 	@RequestMapping(value ="/matriz", method = RequestMethod.GET)

@@ -19,7 +19,7 @@ import tcc.ifes.repositories.TagRepository;
 import tcc.ifes.repositories.UsuarioRepository;
 
 @Service
-public class criandoPerfisService {
+public class FiltragemConteudoService {
 
 	@Autowired
 	UsuarioRepository usuarioRepository;
@@ -44,7 +44,7 @@ public class criandoPerfisService {
 	public float[][] matriz() {
 		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(1));
 		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(1));
-		Usuario usuario = usuarioRepository.findOne(1);
+		Usuario usuario = usuarioRepository.findOne(2);
 		avaliacao = avaliacaoRepository.findByUsuario(usuario);
 
 		int linhas = lin.size() + 1;
@@ -52,11 +52,11 @@ public class criandoPerfisService {
 
 		float matriz[][] = new float[linhas][colunas];
 		int i = 0;
-		
+
 		for (i = 0; i < colunas; i++) {
-			matriz[0][i] = tagRepository.getOne(i + 1).getId();
+			matriz[0][i] = col.get(i).getId();
 		}
-		
+
 		for (i = 0; i < avaliacao.size(); i++) {
 			for (ItemTag item : avaliacao.get(i).getItem().getItens()) {
 				float nota = avaliacao.get(i).getNota();
@@ -78,15 +78,15 @@ public class criandoPerfisService {
 		float[][] matriz = matriz();
 		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(1));
 		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(1));
-		
+
 		int linhas = lin.size() + 1;
 		int colunas = col.size();
 		float soma = 0.0f;
 		int z = 0;
-		
+
 		List<Float> somatorio = new ArrayList<Float>();
 		List<Float> media = new ArrayList<Float>();
-		
+
 		for (int p = 0; p < colunas; p++) {
 			for (int k = 1; k < linhas; k++) {
 				soma = soma + matriz[k][p];
@@ -94,65 +94,71 @@ public class criandoPerfisService {
 			somatorio.add(soma);
 			soma = 0.0f;
 		}
-		
+
 		for (int p = 0; p < colunas; p++) {
 			for (int k = 1; k < linhas; k++) {
-				if(matriz[k][p] != 0.0) {
+				if (matriz[k][p] != 0.0) {
 					z++;
 				}
 			}
-			float valor = somatorio.get(p) / z;
-			media.add(valor);
+			if (z != 0) {
+				float valor = somatorio.get(p) / z;
+				media.add(valor);
+			} else {
+				media.add(0.0f);
+			}
 			z = 0;
 		}
-		
+
 		return media;
 	}
-	
-	public List<Float> normalizacao(){
+
+	public List<Float> normalizacao() {
 		List<Float> media = media();
 		int colunas = media.size();
 		float maximo = 0.0f;
 		List<Float> normalizacao = new ArrayList<Float>();
-		
-		for(int p = 0; p < colunas; p++) {
-			if(media.get(p) > maximo) {
+
+		for (int p = 0; p < colunas; p++) {
+			if (media.get(p) > maximo) {
 				maximo = media.get(p);
 			}
 		}
-		
-		for(int p = 0; p < colunas; p++) {
+
+		for (int p = 0; p < colunas; p++) {
 			normalizacao.add(media.get(p) / maximo);
 		}
-		
+
 		return normalizacao;
 	}
-	
-	public List<Float> distanciaEuclidiana(){
+
+	public List<Float> distanciaEuclidiana() {
 		List<Float> normalizacao = normalizacao();
 		int colunas = normalizacao.size();
 		float matriz[][] = matriz();
-		System.out.println(matriz.length);
 		float somaDistancia = 0.0f;
 		List<Float> distanciaEuclidiana = new ArrayList<>();
-		
-		for(int i = 1; i < matriz.length; i++) {
-			for(int c = 0; c < colunas; c++) {
-				if(matriz[i][c] != 0.0f) {
+
+		for (int i = 1; i < matriz.length; i++) {
+			for (int c = 0; c < colunas; c++) {
+				if (matriz[i][c] != 0.0f) {
 					somaDistancia = somaDistancia + (float) Math.pow(normalizacao.get(c) - 1, 2);
-				}else {
+					System.out.println("dentro if: " + somaDistancia);
+				} else {
 					somaDistancia = somaDistancia + (float) Math.pow(normalizacao.get(c), 2);
+					System.out.println("fora if: " + somaDistancia);
 				}
-				
+
 			}
 			somaDistancia = (float) Math.sqrt(somaDistancia);
-			distanciaEuclidiana.add(somaDistancia);	
+			System.out.println("soma completa: " + somaDistancia);
+			distanciaEuclidiana.add(somaDistancia);
 			somaDistancia = 0.0f;
+			System.out.println("reset: " + somaDistancia);
 		}
 		
+
 		return distanciaEuclidiana;
 	}
-	
-	
-	
+
 }
