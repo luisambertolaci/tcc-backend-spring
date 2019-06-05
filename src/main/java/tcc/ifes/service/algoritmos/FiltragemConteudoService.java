@@ -42,9 +42,9 @@ public class FiltragemConteudoService {
 	private List<Avaliacao> avaliacao = new ArrayList<Avaliacao>();
 
 	public float[][] matriz() {
-		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(1));
-		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(1));
-		Usuario usuario = usuarioRepository.findOne(2);
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(2));
+		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(2));
+		Usuario usuario = usuarioRepository.findOne(8);
 		avaliacao = avaliacaoRepository.findByUsuario(usuario);
 
 		int linhas = lin.size() + 1;
@@ -76,8 +76,8 @@ public class FiltragemConteudoService {
 
 	public List<Float> media() {
 		float[][] matriz = matriz();
-		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(1));
-		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(1));
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(2));
+		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(2));
 
 		int linhas = lin.size() + 1;
 		int colunas = col.size();
