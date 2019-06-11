@@ -41,10 +41,10 @@ public class FiltragemConteudoService {
 
 	private List<Avaliacao> avaliacao = new ArrayList<Avaliacao>();
 
-	public float[][] matriz() {
-		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(2));
-		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(2));
-		Usuario usuario = usuarioRepository.findOne(8);
+	public float[][] matriz(Integer projeto_id, Integer usuario_id) {
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
+		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(projeto_id));
+		Usuario usuario = usuarioRepository.findOne(usuario_id);
 		avaliacao = avaliacaoRepository.findByUsuario(usuario);
 
 		int linhas = lin.size() + 1;
@@ -74,10 +74,10 @@ public class FiltragemConteudoService {
 		return matriz;
 	}
 
-	public List<Float> media() {
-		float[][] matriz = matriz();
-		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(2));
-		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(2));
+	public List<Float> media(Integer projeto_id, Integer usuario_id) {
+		float[][] matriz = matriz(projeto_id, usuario_id);
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
+		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(projeto_id));
 
 		int linhas = lin.size() + 1;
 		int colunas = col.size();
@@ -113,8 +113,8 @@ public class FiltragemConteudoService {
 		return media;
 	}
 
-	public List<Float> normalizacao() {
-		List<Float> media = media();
+	public List<Float> normalizacao(Integer projeto_id, Integer usuario_id) {
+		List<Float> media = media(projeto_id, usuario_id);
 		int colunas = media.size();
 		float maximo = 0.0f;
 		List<Float> normalizacao = new ArrayList<Float>();
@@ -132,10 +132,10 @@ public class FiltragemConteudoService {
 		return normalizacao;
 	}
 
-	public List<Float> distanciaEuclidiana() {
-		List<Float> normalizacao = normalizacao();
+	public List<Float> distanciaEuclidiana(Integer projeto_id, Integer usuario_id) {
+		List<Float> normalizacao = normalizacao(projeto_id, usuario_id);
 		int colunas = normalizacao.size();
-		float matriz[][] = matriz();
+		float matriz[][] = matriz(projeto_id, usuario_id);
 		float somaDistancia = 0.0f;
 		List<Float> distanciaEuclidiana = new ArrayList<>();
 
