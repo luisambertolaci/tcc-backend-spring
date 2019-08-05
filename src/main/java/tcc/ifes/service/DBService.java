@@ -55,6 +55,8 @@ public class DBService {
 		
 		Projeto projeto2 = new Projeto(null, "Jogos", sdf.parse("19/03/2019 15:11"), gerente1);
 		
+		Projeto projeto3 = new Projeto(null, "Séries", sdf.parse("13/06/2019 22:50"), gerente1);
+		
 		Usuario usuario1 = new Usuario(null, "Ana", "ana", "abc123", projeto1, null, null, null, null, null);
 		Usuario usuario2 = new Usuario(null, "Marcos", "marcos", "abc123", projeto1, null, null, null, null, null);
 		Usuario usuario3 = new Usuario(null, "Pedro", "pedro", "abc123", projeto1, null, null, null, null, null);
@@ -70,6 +72,16 @@ public class DBService {
 		Usuario usuario12 = new Usuario(null, "Adriano", "adriano", "abc123", projeto2, null, null, null, null, null);
 		Usuario usuario13 = new Usuario(null, "Janaina", "janaina", "abc123", projeto2, null, null, null, null, null);
 		Usuario usuario14 = new Usuario(null, "Leonardo", "leonardo", "abc123", projeto2, null, null, null, null, null);
+		
+		Usuario usuario15 = new Usuario(null, "Luisa", "login", "abc123", projeto3, null, null, null, null, null);
+		Usuario usuario16 = new Usuario(null, "Marina", "login", "abc123", projeto3, null, null, null, null, null);
+		Usuario usuario17 = new Usuario(null, "Hanna", "login", "abc123", projeto3, null, null, null, null, null);
+		Usuario usuario18 = new Usuario(null, "Flavio", "login", "abc123", projeto3, null, null, null, null, null);
+		Usuario usuario19 = new Usuario(null, "Lucas", "login", "abc123", projeto3, null, null, null, null, null);
+		Usuario usuario20 = new Usuario(null, "Barbara", "login", "abc123", projeto3, null, null, null, null, null);
+		Usuario usuario21 = new Usuario(null, "Diogo", "login", "abc123", projeto3, null, null, null, null, null);
+		Usuario usuario22 = new Usuario(null, "Pedro", "login", "abc123", projeto3, null, null, null, null, null);
+		Usuario usuario23 = new Usuario(null, "Fernanda", "login", "abc123", projeto3, null, null, null, null, null);
 		
 		Item item1 = new Item(null, "Freddy","", projeto1, null, null, null, null, null);
 		Item item2 = new Item(null, "O Ultimato Bourne","", projeto1, null, null, null, null, null);
@@ -98,7 +110,44 @@ public class DBService {
 		Item item24 = new Item(null, "GTA V","", projeto2, null, null, null, null, null);
 		Item item25 = new Item(null, "Uncharted 4","", projeto2, null, null, null, null, null);
 		Item item26 = new Item(null, "THe Legend of Zelda: Ocarina of Time","", projeto2, null, null, null, null, null);
-
+		
+		Item item27 = new Item(null, "Good Girls","", projeto3, null, null, null, null, null);
+		Item item28 = new Item(null, "The Good Place","", projeto3, null, null, null, null, null);
+		Item item29 = new Item(null, "How I met Your Mother","", projeto3, null, null, null, null, null);
+		Item item30 = new Item(null, "Friends","", projeto3, null, null, null, null, null);
+		Item item31 = new Item(null, "The Vampire Diaries", "", projeto3, null, null, null, null, null);
+		Item item32 = new Item(null, "Chernobyl","", projeto3, null, null, null, null, null);
+		Item item33 = new Item(null, "The 100","", projeto3, null, null, null, null, null);
+		Item item34 = new Item(null, "Brooklyn 99","", projeto3, null, null, null, null, null);
+		Item item35 = new Item(null, "Orange is The New Black","", projeto3, null, null, null, null, null);
+		Item item36 = new Item(null, "The End of the F***ing World","", projeto3, null, null, null, null, null);
+		Item item37 = new Item(null, "Sex Education","", projeto3, null, null, null, null, null);
+		Item item38 = new Item(null, "La Casa de Papel","", projeto3, null, null, null, null, null);
+		Item item39 = new Item(null, "Stranger Things","", projeto3, null, null, null, null, null);
+		Item item40 = new Item(null, "Black Mirror","", projeto3, null, null, null, null, null);
+		Item item41 = new Item(null, "Doctor Who","", projeto3, null, null, null, null, null);
+		Item item42 = new Item(null, "Game of Thrones","", projeto3, null, null, null, null, null);
+		Item item43 = new Item(null, "The Flash","", projeto3, null, null, null, null, null);
+		Item item44 = new Item(null, "Gotham","", projeto3, null, null, null, null, null);
+		Item item45 = new Item(null, "Demolidor","", projeto3, null, null, null, null, null);
+		Item item46 = new Item(null, "Jessica Jones","", projeto3, null, null, null, null, null);
+		Item item47 = new Item(null, "Modern Family","", projeto3, null, null, null, null, null);
+		Item item48 = new Item(null, "Supergirl","", projeto3, null, null, null, null, null);
+		Item item49 = new Item(null, "Arrow","", projeto3, null, null, null, null, null);
+		Item item50 = new Item(null, "Big Mouth","", projeto3, null, null, null, null, null);
+		Item item51 = new Item(null, "South Park","", projeto3, null, null, null, null, null);
+		Item item52 = new Item(null, "Bojack","", projeto3, null, null, null, null, null);
+		Item item53 = new Item(null, "Greys Anatomy","", projeto3, null, null, null, null, null);
+		Item item54 = new Item(null, "Hannibal","", projeto3, null, null, null, null, null);
+		Item item55 = new Item(null, "Sabrina","", projeto3, null, null, null, null, null);
+		Item item56 = new Item(null, "Lucifer","", projeto3, null, null, null, null, null);
+		Item item57 = new Item(null, "Titans","", projeto3, null, null, null, null, null);
+		Item item58 = new Item(null, "Breaking Bad","", projeto3, null, null, null, null, null);
+		Item item59 = new Item(null, "Lost","", projeto3, null, null, null, null, null);
+		Item item60 = new Item(null, "Westworld","", projeto3, null, null, null, null, null);
+		Item item61 = new Item(null, "Narcos","", projeto3, null, null, null, null, null);
+		Item item62 = new Item(null, "Supernatural","", projeto3, null, null, null, null, null);
+		Item item63 = new Item(null, "Mr Robot","", projeto3, null, null, null, null, null);
 		
 		Tag tag1 = new Tag(null, "Ação", projeto1);
 		Tag tag2 = new Tag(null, "Comédia", projeto1);
@@ -151,6 +200,21 @@ public class DBService {
 		Tag tag48 = new Tag(null, "Historia", projeto2);
 		Tag tag49 = new Tag(null, "Mundo Aberto", projeto2);
 		Tag tag50 = new Tag(null, "Linear", projeto2);
+		
+		Tag tag51 = new Tag(null, "Comedia", projeto3);
+		Tag tag52 = new Tag(null, "Drama", projeto3);
+		Tag tag53 = new Tag(null, "Crime", projeto3);
+		Tag tag54 = new Tag(null, "Fantasia", projeto3);
+		Tag tag55 = new Tag(null, "Romance", projeto3);
+		Tag tag56 = new Tag(null, "Terror", projeto3);
+		Tag tag57 = new Tag(null, "Real", projeto3);
+		Tag tag58 = new Tag(null, "Misterio", projeto3);
+		Tag tag59 = new Tag(null, "Sci-Fi", projeto3);
+		Tag tag60 = new Tag(null, "Aventura", projeto3);
+		Tag tag61 = new Tag(null, "Ação", projeto3);
+		Tag tag62 = new Tag(null, "Suspense", projeto3);
+		Tag tag63 = new Tag(null, "Animação", projeto3);
+		
 		
 		ItemTag itemTag1 = new ItemTag(item1, tag3);
 		ItemTag itemTag2 = new ItemTag(item1, tag4);
@@ -316,6 +380,146 @@ public class DBService {
 		ItemTag itemTag137 = new ItemTag(item26, tag39);	
 		ItemTag itemTag138 = new ItemTag(item26, tag40);
 		
+		ItemTag itemTag139 = new ItemTag(item27, tag51);
+		ItemTag itemTag140 = new ItemTag(item27, tag52);
+		ItemTag itemTag141 = new ItemTag(item27, tag53);
+		
+		ItemTag itemTag142 = new ItemTag(item28, tag51);
+		ItemTag itemTag143 = new ItemTag(item28, tag52);
+		ItemTag itemTag144 = new ItemTag(item28, tag54);
+		
+		ItemTag itemTag145 = new ItemTag(item29, tag51);
+		ItemTag itemTag146 = new ItemTag(item29, tag55);
+		
+		ItemTag itemTag147 = new ItemTag(item30, tag51);
+		ItemTag itemTag148 = new ItemTag(item30, tag55);
+		
+		ItemTag itemTag149 = new ItemTag(item31, tag52);
+		ItemTag itemTag150 = new ItemTag(item31, tag56);
+		ItemTag itemTag151 = new ItemTag(item31, tag54);
+		ItemTag itemTag152 = new ItemTag(item31, tag55);
+		
+		ItemTag itemTag153 = new ItemTag(item32, tag52);
+		ItemTag itemTag154 = new ItemTag(item32, tag57);
+		
+		ItemTag itemTag155 = new ItemTag(item33, tag52);
+		ItemTag itemTag156 = new ItemTag(item33, tag58);
+		ItemTag itemTag157 = new ItemTag(item33, tag59);
+		
+		ItemTag itemTag158 = new ItemTag(item34, tag51);
+		ItemTag itemTag159 = new ItemTag(item34, tag53);
+		
+		ItemTag itemTag160 = new ItemTag(item35, tag51);
+		ItemTag itemTag161 = new ItemTag(item35, tag52);
+		ItemTag itemTag162 = new ItemTag(item35, tag53);
+		
+		ItemTag itemTag163 = new ItemTag(item36, tag51);
+		ItemTag itemTag164 = new ItemTag(item36, tag60);
+		ItemTag itemTag165 = new ItemTag(item36, tag53);
+		
+		ItemTag itemTag166 = new ItemTag(item37, tag51);
+		ItemTag itemTag167 = new ItemTag(item37, tag52);
+		
+		ItemTag itemTag168 = new ItemTag(item38, tag61);
+		ItemTag itemTag169 = new ItemTag(item38, tag58);
+		ItemTag itemTag170 = new ItemTag(item38, tag53);
+		
+		ItemTag itemTag171 = new ItemTag(item39, tag52);
+		ItemTag itemTag172 = new ItemTag(item39, tag56);
+		ItemTag itemTag173 = new ItemTag(item39, tag54);
+		
+		ItemTag itemTag174 = new ItemTag(item40, tag52);
+		ItemTag itemTag175 = new ItemTag(item40, tag62);
+		ItemTag itemTag176 = new ItemTag(item40, tag59);
+		
+		ItemTag itemTag177 = new ItemTag(item41, tag60);
+		ItemTag itemTag178 = new ItemTag(item41, tag52);
+		ItemTag itemTag179 = new ItemTag(item41, tag59);
+		
+		ItemTag itemTag180 = new ItemTag(item42, tag61);
+		ItemTag itemTag181 = new ItemTag(item42, tag60);
+		ItemTag itemTag182 = new ItemTag(item42, tag52);
+		
+		ItemTag itemTag183 = new ItemTag(item43, tag61);
+		ItemTag itemTag184 = new ItemTag(item43, tag60);
+		ItemTag itemTag185 = new ItemTag(item43, tag52);
+		
+		ItemTag itemTag186 = new ItemTag(item44, tag61);
+		ItemTag itemTag187 = new ItemTag(item44, tag52);
+		ItemTag itemTag188 = new ItemTag(item44, tag53);
+		
+		ItemTag itemTag189 = new ItemTag(item45, tag61);
+		ItemTag itemTag190 = new ItemTag(item45, tag52);
+		ItemTag itemTag191 = new ItemTag(item45, tag53);
+		
+		ItemTag itemTag192 = new ItemTag(item46, tag61);
+		ItemTag itemTag193 = new ItemTag(item46, tag52);
+		ItemTag itemTag194 = new ItemTag(item46, tag53);
+		
+		ItemTag itemTag195 = new ItemTag(item47, tag51);
+		ItemTag itemTag196 = new ItemTag(item47, tag55);
+		
+		ItemTag itemTag197 = new ItemTag(item48, tag61);
+		ItemTag itemTag198 = new ItemTag(item48, tag60);
+		ItemTag itemTag199 = new ItemTag(item48, tag52);
+		
+		ItemTag itemTag200 = new ItemTag(item49, tag61);
+		ItemTag itemTag201 = new ItemTag(item49, tag60);
+		ItemTag itemTag202 = new ItemTag(item49, tag52);
+		
+		ItemTag itemTag203 = new ItemTag(item50, tag51);
+		ItemTag itemTag204 = new ItemTag(item50, tag55);
+		ItemTag itemTag205 = new ItemTag(item50, tag63);
+		
+		ItemTag itemTag206 = new ItemTag(item51, tag51);
+		ItemTag itemTag207 = new ItemTag(item51, tag63);
+		
+		ItemTag itemTag208 = new ItemTag(item52, tag52);
+		ItemTag itemTag209 = new ItemTag(item52, tag51);
+		ItemTag itemTag210 = new ItemTag(item52, tag63);
+		
+		ItemTag itemTag211 = new ItemTag(item53, tag52);
+		ItemTag itemTag212 = new ItemTag(item53, tag55);
+		
+		ItemTag itemTag213 = new ItemTag(item54, tag56);
+		ItemTag itemTag214 = new ItemTag(item54, tag52);
+		ItemTag itemTag215 = new ItemTag(item54, tag53);
+		
+		ItemTag itemTag216 = new ItemTag(item55, tag52);
+		ItemTag itemTag217 = new ItemTag(item55, tag56);
+		ItemTag itemTag218 = new ItemTag(item55, tag54);
+		
+		ItemTag itemTag219 = new ItemTag(item56, tag53);
+		ItemTag itemTag220 = new ItemTag(item56, tag52);
+		ItemTag itemTag221 = new ItemTag(item56, tag54);
+		
+		ItemTag itemTag222 = new ItemTag(item57, tag61);
+		ItemTag itemTag223 = new ItemTag(item57, tag60);
+		ItemTag itemTag224 = new ItemTag(item57, tag52);
+		
+		ItemTag itemTag225 = new ItemTag(item58, tag52);
+		ItemTag itemTag226 = new ItemTag(item58, tag62);
+		ItemTag itemTag227 = new ItemTag(item58, tag53);
+		
+		ItemTag itemTag228 = new ItemTag(item59, tag60);
+		ItemTag itemTag229 = new ItemTag(item59, tag52);
+		ItemTag itemTag230 = new ItemTag(item59, tag54);
+		
+		ItemTag itemTag231 = new ItemTag(item60, tag52);
+		ItemTag itemTag232 = new ItemTag(item60, tag58);
+		ItemTag itemTag233 = new ItemTag(item60, tag59);
+		
+		ItemTag itemTag234 = new ItemTag(item61, tag52);
+		ItemTag itemTag235 = new ItemTag(item61, tag53);
+		ItemTag itemTag236 = new ItemTag(item61, tag57);
+		
+		ItemTag itemTag237 = new ItemTag(item62, tag52);
+		ItemTag itemTag238 = new ItemTag(item62, tag56);
+		ItemTag itemTag239 = new ItemTag(item62, tag54);
+		
+		ItemTag itemTag240 = new ItemTag(item63, tag62);
+		ItemTag itemTag241 = new ItemTag(item63, tag52);
+		ItemTag itemTag242 = new ItemTag(item63, tag53);
 		
 		item1.setItens(Arrays.asList(itemTag1, itemTag2, itemTag3));
 		item2.setItens(Arrays.asList(itemTag4, itemTag5, itemTag6));
@@ -345,6 +549,43 @@ public class DBService {
 		item25.setItens(Arrays.asList(itemTag127, itemTag128, itemTag129, itemTag130, itemTag131, itemTag132));
 		item26.setItens(Arrays.asList(itemTag133, itemTag134, itemTag135, itemTag136, itemTag137, itemTag138));
 		
+		item27.setItens(Arrays.asList(itemTag139, itemTag140, itemTag141));
+		item28.setItens(Arrays.asList(itemTag142, itemTag143, itemTag144));
+		item29.setItens(Arrays.asList(itemTag145, itemTag146));
+		item30.setItens(Arrays.asList(itemTag147, itemTag148));
+		item31.setItens(Arrays.asList(itemTag149, itemTag150, itemTag151, itemTag152));
+		item32.setItens(Arrays.asList(itemTag153, itemTag154));
+		item33.setItens(Arrays.asList(itemTag155, itemTag156, itemTag157));
+		item34.setItens(Arrays.asList(itemTag158, itemTag159));
+		item35.setItens(Arrays.asList(itemTag160, itemTag161, itemTag162));
+		item36.setItens(Arrays.asList(itemTag163, itemTag164, itemTag165));
+		item37.setItens(Arrays.asList(itemTag166, itemTag167));
+		item38.setItens(Arrays.asList(itemTag168, itemTag169, itemTag170));
+		item39.setItens(Arrays.asList(itemTag171, itemTag172, itemTag173));
+		item40.setItens(Arrays.asList(itemTag174, itemTag175, itemTag176));
+		item41.setItens(Arrays.asList(itemTag177, itemTag178, itemTag179));
+		item42.setItens(Arrays.asList(itemTag180, itemTag181, itemTag182));
+		item43.setItens(Arrays.asList(itemTag183, itemTag184, itemTag185));
+		item44.setItens(Arrays.asList(itemTag186, itemTag187, itemTag188));
+		item45.setItens(Arrays.asList(itemTag189, itemTag190, itemTag191));
+		item46.setItens(Arrays.asList(itemTag192, itemTag193, itemTag194));
+		item47.setItens(Arrays.asList(itemTag195, itemTag196));
+		item48.setItens(Arrays.asList(itemTag197, itemTag198, itemTag199));
+		item49.setItens(Arrays.asList(itemTag200, itemTag201, itemTag202));
+		item50.setItens(Arrays.asList(itemTag203, itemTag204, itemTag205));
+		item51.setItens(Arrays.asList(itemTag206, itemTag207));
+		item52.setItens(Arrays.asList(itemTag208, itemTag209, itemTag210));
+		item53.setItens(Arrays.asList(itemTag211, itemTag212));
+		item54.setItens(Arrays.asList(itemTag213, itemTag214, itemTag215));
+		item55.setItens(Arrays.asList(itemTag216, itemTag217, itemTag218));
+		item56.setItens(Arrays.asList(itemTag219, itemTag220, itemTag221));
+		item57.setItens(Arrays.asList(itemTag222, itemTag223, itemTag224));
+		item58.setItens(Arrays.asList(itemTag225, itemTag226, itemTag227));
+		item59.setItens(Arrays.asList(itemTag228, itemTag229, itemTag230));
+		item60.setItens(Arrays.asList(itemTag231, itemTag232, itemTag233));
+		item61.setItens(Arrays.asList(itemTag234, itemTag235, itemTag236));
+		item62.setItens(Arrays.asList(itemTag237, itemTag238, itemTag239));
+		item63.setItens(Arrays.asList(itemTag240, itemTag241, itemTag242));
 		
 		Avaliacao avaliacao1 = new Avaliacao(null, 2.5f, sdf.parse("05/02/2018 18:23"), usuario1, item1);
 		Avaliacao avaliacao2 = new Avaliacao(null, 3.5f, sdf.parse("05/02/2018 18:23"), usuario1, item2);
@@ -454,17 +695,87 @@ public class DBService {
 		Avaliacao avaliacao93 = new Avaliacao(null, 3.5f, sdf.parse("19/03/2019 16:22"), usuario14, item24);
 		Avaliacao avaliacao94 = new Avaliacao(null, 4.0f, sdf.parse("19/03/2019 16:22"), usuario14, item25);
 		
+		Avaliacao avaliacao95 = new Avaliacao(null, 3.7f, sdf.parse("14/06/2019 13:36"), usuario15, item27);
+		Avaliacao avaliacao96 = new Avaliacao(null, 4.5f, sdf.parse("14/06/2019 13:36"), usuario15, item28);
+		Avaliacao avaliacao97 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario15, item29);
+		Avaliacao avaliacao98 = new Avaliacao(null, 3.5f, sdf.parse("14/06/2019 13:36"), usuario15, item30);
+		Avaliacao avaliacao99 = new Avaliacao(null, 3.8f, sdf.parse("14/06/2019 13:36"), usuario15, item31);
+		Avaliacao avaliacao100 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario15, item32);
+		Avaliacao avaliacao101 = new Avaliacao(null, 4.8f, sdf.parse("14/06/2019 13:36"), usuario15, item33);
+		Avaliacao avaliacao102 = new Avaliacao(null, 3.5f, sdf.parse("14/06/2019 13:36"), usuario15, item34);
+		Avaliacao avaliacao103 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario15, item35);
+		Avaliacao avaliacao104 = new Avaliacao(null, 3.5f, sdf.parse("14/06/2019 13:36"), usuario15, item36);
+		Avaliacao avaliacao105 = new Avaliacao(null, 3.5f, sdf.parse("14/06/2019 13:36"), usuario15, item38);
+		Avaliacao avaliacao106 = new Avaliacao(null, 3.2f, sdf.parse("14/06/2019 13:36"), usuario15, item40);
+		Avaliacao avaliacao107 = new Avaliacao(null, 4.8f, sdf.parse("14/06/2019 13:36"), usuario15, item41);
+		Avaliacao avaliacao108 = new Avaliacao(null, 4.8f, sdf.parse("14/06/2019 13:36"), usuario15, item43);
+		Avaliacao avaliacao109 = new Avaliacao(null, 3.8f, sdf.parse("14/06/2019 13:36"), usuario15, item46);
+		Avaliacao avaliacao110 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario15, item47);
+		Avaliacao avaliacao111 = new Avaliacao(null, 3f, sdf.parse("14/06/2019 13:36"), usuario15, item49);
+		Avaliacao avaliacao112 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario15, item50);
+		Avaliacao avaliacao113 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario15, item52);
+		Avaliacao avaliacao114 = new Avaliacao(null, 3.5f, sdf.parse("14/06/2019 13:36"), usuario15, item55);
+		Avaliacao avaliacao115 = new Avaliacao(null, 4.5f, sdf.parse("14/06/2019 13:36"), usuario15, item58);
+		Avaliacao avaliacao116 = new Avaliacao(null, 4.8f, sdf.parse("14/06/2019 13:36"), usuario15, item61);
+		Avaliacao avaliacao117 = new Avaliacao(null, 4.8f, sdf.parse("14/06/2019 13:36"), usuario15, item63);
+		
+		Avaliacao avaliacao118 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario16, item28);
+		Avaliacao avaliacao119 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario16, item29);
+		Avaliacao avaliacao120 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario16, item31);
+		Avaliacao avaliacao121 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario16, item32);
+		Avaliacao avaliacao122 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario16, item33);
+		Avaliacao avaliacao123 = new Avaliacao(null, 3f, sdf.parse("14/06/2019 13:36"), usuario16, item34);
+		Avaliacao avaliacao124 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario16, item35);
+		Avaliacao avaliacao125 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario16, item38);
+		Avaliacao avaliacao126 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario16, item40);
+		Avaliacao avaliacao127 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario16, item41);
+		Avaliacao avaliacao128 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario16, item46);
+		Avaliacao avaliacao129 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario16, item59);
+		Avaliacao avaliacao130 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario16, item62);
+		
+		Avaliacao avaliacao131 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario17, item28);
+		Avaliacao avaliacao132 = new Avaliacao(null, 4.6f, sdf.parse("14/06/2019 13:36"), usuario17, item30);
+		Avaliacao avaliacao133 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario17, item32);
+		Avaliacao avaliacao134 = new Avaliacao(null, 4.5f, sdf.parse("14/06/2019 13:36"), usuario17, item35);
+		Avaliacao avaliacao135 = new Avaliacao(null, 3.5f, sdf.parse("14/06/2019 13:36"), usuario17, item36);
+		Avaliacao avaliacao136 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario17, item37);
+		Avaliacao avaliacao137 = new Avaliacao(null, 1f, sdf.parse("14/06/2019 13:36"), usuario17, item38);
+		Avaliacao avaliacao138 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario17, item39);
+		Avaliacao avaliacao139 = new Avaliacao(null, 4.5f, sdf.parse("14/06/2019 13:36"), usuario17, item40);
+		Avaliacao avaliacao140 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario17, item42);
+		Avaliacao avaliacao141 = new Avaliacao(null, 1f, sdf.parse("14/06/2019 13:36"), usuario17, item44);
+		Avaliacao avaliacao142 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario17, item46);
+		Avaliacao avaliacao143 = new Avaliacao(null, 4.7f, sdf.parse("14/06/2019 13:36"), usuario17, item53);
+		Avaliacao avaliacao144 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario17, item54);
+		Avaliacao avaliacao145 = new Avaliacao(null, 3.5f, sdf.parse("14/06/2019 13:36"), usuario17, item55);
+		Avaliacao avaliacao146 = new Avaliacao(null, 4f, sdf.parse("14/06/2019 13:36"), usuario17, item56);
+		Avaliacao avaliacao147 = new Avaliacao(null, 5f, sdf.parse("14/06/2019 13:36"), usuario17, item60);
 		
 		
 		gerenteRepository.save(Arrays.asList(gerente1));
-		projetoRepository.save(Arrays.asList(projeto1, projeto2));
-		usuarioRepository.save(Arrays.asList(usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7,
-				usuario8, usuario9, usuario10, usuario11, usuario12, usuario13, usuario14));
-		itemRepository.save(Arrays.asList(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10, item11, item12, item13, item14, item15, item16,
-				item17, item18, item19, item20, item21, item22, item23, item24, item25, item26));
-		tagRepository.save(Arrays.asList(tag1, tag2,tag3,tag4,tag5,tag6,tag7,tag8,tag9,tag10, tag11, tag12, tag13, tag14, tag15, tag16, tag17, tag18, tag19, tag20,
-				tag21, tag22 ,tag23, tag24, tag25, tag26, tag27, tag28, tag29, tag30, tag31, tag32, tag33, tag34, tag35, tag36, tag37, tag38, tag39, tag40,
-				tag41, tag42, tag43, tag44, tag45, tag46, tag47, tag48, tag49, tag50));
+		
+		projetoRepository.save(Arrays.asList(projeto1, projeto2, projeto3));
+		
+		usuarioRepository.save(Arrays.asList(usuario1, usuario2, usuario3, usuario4, usuario5, usuario6, usuario7, usuario8, usuario9, usuario10,
+				usuario11, usuario12, usuario13, usuario14, usuario15, usuario16, usuario17, usuario18,usuario19, usuario20,
+				usuario21, usuario22, usuario23));
+		
+		itemRepository.save(Arrays.asList(item1, item2, item3, item4, item5, item6, item7, item8, item9,
+				item10, item11, item12, item13, item14, item15, item16, item17, item18, item19,
+				item20, item21, item22, item23, item24, item25, item26, item27, item28, item29,
+				item30, item31, item32, item33, item34, item35, item36, item37, item38, item39,
+				item40, item41, item42, item43, item44, item45, item46, item47, item48, item49,
+				item50, item51, item52, item53, item54, item55, item56, item57, item58, item59,
+				item60, item61, item62, item63));
+		
+		tagRepository.save(Arrays.asList(tag1, tag2,tag3,tag4,tag5,tag6,tag7,tag8,tag9,
+				tag10, tag11, tag12, tag13, tag14, tag15, tag16, tag17, tag18, tag19,
+				tag20, tag21, tag22 ,tag23, tag24, tag25, tag26, tag27, tag28, tag29,
+				tag30, tag31, tag32, tag33, tag34, tag35, tag36, tag37, tag38, tag39,
+				tag40, tag41, tag42, tag43, tag44, tag45, tag46, tag47, tag48, tag49,
+				tag50, tag51, tag52, tag53, tag54, tag55, tag56, tag57, tag58, tag59,
+				tag60, tag61, tag62, tag63));
+		
 		itemTagRepository.save(Arrays.asList(itemTag1, itemTag2, itemTag3, itemTag4, itemTag5, itemTag6, itemTag7, itemTag8, itemTag9, itemTag10, 
 				itemTag11, itemTag12, itemTag13, itemTag14, itemTag15, itemTag16, itemTag17, itemTag18, itemTag19, itemTag20,
 				itemTag21, itemTag22, itemTag23, itemTag24, itemTag25, itemTag26, itemTag27, itemTag28, itemTag29, itemTag30, 
@@ -478,7 +789,19 @@ public class DBService {
 				itemTag101, itemTag102, itemTag103, itemTag104, itemTag105, itemTag106, itemTag107, itemTag108, itemTag109, itemTag110, 
 				itemTag111, itemTag112, itemTag113, itemTag114, itemTag115, itemTag116, itemTag117, itemTag118, itemTag119, itemTag120,
 				itemTag121, itemTag122, itemTag123, itemTag124, itemTag125, itemTag126, itemTag127, itemTag128, itemTag129, itemTag130, 
-				itemTag131, itemTag132, itemTag133, itemTag134, itemTag135, itemTag136, itemTag137, itemTag138));
+				itemTag131, itemTag132, itemTag133, itemTag134, itemTag135, itemTag136, itemTag137, itemTag138, itemTag139, itemTag140,
+				itemTag141, itemTag142, itemTag143, itemTag144, itemTag145, itemTag146, itemTag147, itemTag148, itemTag149, itemTag150, 
+				itemTag151, itemTag152, itemTag153, itemTag154, itemTag155, itemTag156, itemTag157, itemTag158, itemTag159, itemTag160,
+				itemTag161, itemTag162, itemTag163, itemTag164, itemTag165, itemTag166, itemTag167, itemTag168, itemTag169, itemTag170, 
+				itemTag171, itemTag172, itemTag173, itemTag174, itemTag175, itemTag176, itemTag177, itemTag178, itemTag179, itemTag180,
+				itemTag181, itemTag182, itemTag183, itemTag184, itemTag185, itemTag186, itemTag187, itemTag188, itemTag189, itemTag190, 
+				itemTag191, itemTag192, itemTag193, itemTag194, itemTag195, itemTag196, itemTag197, itemTag198, itemTag199, itemTag200,
+				itemTag201, itemTag202, itemTag203, itemTag204, itemTag205, itemTag206, itemTag207, itemTag208, itemTag209, itemTag210, 
+				itemTag211, itemTag212, itemTag213, itemTag214, itemTag215, itemTag216, itemTag217, itemTag218, itemTag219, itemTag220,
+				itemTag221, itemTag222, itemTag223, itemTag224, itemTag225, itemTag226, itemTag227, itemTag228, itemTag229, itemTag230, 
+				itemTag231, itemTag232, itemTag233, itemTag234, itemTag235, itemTag236, itemTag237, itemTag238, itemTag239, itemTag240,
+				itemTag241, itemTag242));
+		
 		avaliacaoRepository.save(Arrays.asList(avaliacao1, avaliacao2, avaliacao3, avaliacao4, avaliacao5, avaliacao6, avaliacao7, avaliacao8, avaliacao9, avaliacao10, 
 				avaliacao11, avaliacao12, avaliacao13, avaliacao14, avaliacao15, avaliacao16, avaliacao17, avaliacao18, avaliacao19, avaliacao20, 
 				avaliacao21, avaliacao22, avaliacao23, avaliacao24, avaliacao25, avaliacao26, avaliacao27, avaliacao28, avaliacao29, avaliacao30, 
@@ -488,7 +811,13 @@ public class DBService {
 				avaliacao61, avaliacao62, avaliacao63, avaliacao64, avaliacao65, avaliacao66, avaliacao67, avaliacao68, avaliacao69, avaliacao70, 
 				avaliacao71, avaliacao72, avaliacao73, avaliacao74, avaliacao75, avaliacao76, avaliacao77, avaliacao78, avaliacao79, avaliacao80, 
 				avaliacao81, avaliacao82, avaliacao83, avaliacao84, avaliacao85, avaliacao86, avaliacao87, avaliacao88, avaliacao89, avaliacao90, 
-				avaliacao91, avaliacao92, avaliacao93, avaliacao94));
+				avaliacao91, avaliacao92, avaliacao93, avaliacao94, avaliacao95, avaliacao96, avaliacao97, avaliacao98, avaliacao99, avaliacao100, 
+				avaliacao101, avaliacao102, avaliacao103, avaliacao104, avaliacao105, avaliacao106, avaliacao107, avaliacao108, avaliacao109, avaliacao110,
+				avaliacao111, avaliacao112, avaliacao113, avaliacao114, avaliacao115, avaliacao116, avaliacao117, avaliacao118, avaliacao119, avaliacao120,
+				avaliacao121, avaliacao122, avaliacao123, avaliacao124, avaliacao125, avaliacao126, avaliacao127, avaliacao128, avaliacao129, avaliacao130,
+				avaliacao131, avaliacao132, avaliacao133, avaliacao134, avaliacao135, avaliacao136, avaliacao137, avaliacao138, avaliacao139, avaliacao140,
+				avaliacao141, avaliacao142, avaliacao143, avaliacao144, avaliacao145, avaliacao146, avaliacao147));
+		
 		recomendacaoRepository.save(Arrays.asList());
 		
 		

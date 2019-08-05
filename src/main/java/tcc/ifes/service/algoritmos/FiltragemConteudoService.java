@@ -135,20 +135,14 @@ public class FiltragemConteudoService {
 	public List<Float> distanciaEuclidiana(Integer projeto_id, Integer usuario_id) {
 		List<Float> normalizacao = normalizacao(projeto_id, usuario_id);
 		int colunas = normalizacao.size();
-		float matriz[][] = matriz(projeto_id, usuario_id);
+		float matriz[][] = matrizConteudo(projeto_id);
 		float somaDistancia = 0.0f;
 		List<Float> distanciaEuclidiana = new ArrayList<>();
 
 		for (int i = 1; i < matriz.length; i++) {
 			for (int c = 0; c < colunas; c++) {
-				if (matriz[i][c] != 0.0f) {
-					somaDistancia = somaDistancia + (float) Math.pow(normalizacao.get(c) - 1, 2);
-					System.out.println("dentro if: " + somaDistancia);
-				} else {
-					somaDistancia = somaDistancia + (float) Math.pow(normalizacao.get(c), 2);
-					System.out.println("fora if: " + somaDistancia);
-				}
-
+				
+				somaDistancia = somaDistancia + (float) Math.pow(normalizacao.get(c) - matriz[i][c], 2);
 			}
 			somaDistancia = (float) Math.sqrt(somaDistancia);
 			System.out.println("soma completa: " + somaDistancia);
@@ -159,6 +153,38 @@ public class FiltragemConteudoService {
 		
 
 		return distanciaEuclidiana;
+	}
+	
+	public float[][] matrizConteudo(Integer projeto_id) {
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
+		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(projeto_id));
+
+		System.out.println(lin);
+		int linhas = lin.size() + 1;
+		int colunas = col.size();
+
+		float matriz[][] = new float[linhas][colunas];
+		int i = 0;
+
+		for (i = 0; i < colunas; i++) {
+			matriz[0][i] = col.get(i).getId();
+		}
+		
+		for (i = 0; i < lin.size(); i++) {
+			for (ItemTag item : lin.get(i).getItens()) {
+				System.out.println(i + " " + item);
+				item.setTag(tagRepository.findOne(item.getTag().getId()));
+				matriz[lin.indexOf(item.getItem()) + 1][col.indexOf(item.getTag())] = 1;
+			}
+
+		}
+		for (int p = 0; p < linhas; p++) {
+			for (int k = 0; k < colunas; k++) {
+				System.out.print(matriz[p][k] + " ");
+			}
+			System.out.println();
+		}
+		return matriz;
 	}
 
 }
