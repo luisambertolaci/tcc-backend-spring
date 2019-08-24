@@ -141,7 +141,6 @@ public class FiltragemConteudoService {
 
 		for (int i = 1; i < matriz.length; i++) {
 			for (int c = 0; c < colunas; c++) {
-				
 				somaDistancia = somaDistancia + (float) Math.pow(normalizacao.get(c) - matriz[i][c], 2);
 			}
 			somaDistancia = (float) Math.sqrt(somaDistancia);
@@ -150,11 +149,10 @@ public class FiltragemConteudoService {
 			somaDistancia = 0.0f;
 			System.out.println("reset: " + somaDistancia);
 		}
-		
 
 		return distanciaEuclidiana;
 	}
-	
+
 	public float[][] matrizConteudo(Integer projeto_id) {
 		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
 		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(projeto_id));
@@ -169,14 +167,15 @@ public class FiltragemConteudoService {
 		for (i = 0; i < colunas; i++) {
 			matriz[0][i] = col.get(i).getId();
 		}
-		
-		for (i = 0; i < lin.size(); i++) {
-			for (ItemTag item : lin.get(i).getItens()) {
-				System.out.println(i + " " + item);
-				item.setTag(tagRepository.findOne(item.getTag().getId()));
-				matriz[lin.indexOf(item.getItem()) + 1][col.indexOf(item.getTag())] = 1;
-			}
 
+		for (i = 0; i < lin.size(); i++) {
+			//if ((avaliacao = avaliacaoRepository.findByItem(lin.get(i))) == null) {
+				for (ItemTag item : lin.get(i).getItens()) {
+					System.out.println(i + " " + item);
+					item.setTag(tagRepository.findOne(item.getTag().getId()));
+					matriz[lin.indexOf(item.getItem()) + 1][col.indexOf(item.getTag())] = 1;
+				}
+			
 		}
 		for (int p = 0; p < linhas; p++) {
 			for (int k = 0; k < colunas; k++) {
