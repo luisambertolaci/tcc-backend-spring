@@ -254,9 +254,6 @@ public class FiltragemConteudoService {
 		List<Item> lin2 = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
 		avaliacao = avaliacaoRepository.findByUsuario(usuarioRepository.findOne(usuario_id));
 		float distancia[][] = distanciaEuclidiana(projeto_id, usuario_id);
-		DecimalFormat df = new DecimalFormat("0.00");
-		df.format(limite);
-		System.out.println(limite);
 
 		for (int i = 0; i < avaliacao.size(); i++) {
 			while(lin.contains(avaliacao.get(i).getItem())) {
