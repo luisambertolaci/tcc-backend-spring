@@ -108,6 +108,7 @@ public class DBService {
 		Usuario usuario51 = new Usuario(null, "TMG", "", "", projeto1, null, null, null, null, null);
 		Usuario usuario52 = new Usuario(null, "Raphael Macedo Bernardino", "", "", projeto1, null, null, null, null, null);
 		
+		
 		Usuario usuario53 = new Usuario(null, "Alda", "", "", projeto2, null, null, null, null, null);
 		Usuario usuario54 = new Usuario(null, "Alexandre", "", "", projeto2, null, null, null, null, null);
 		Usuario usuario55 = new Usuario(null, "Ana Clara", "", "", projeto2, null, null, null, null, null);
@@ -144,6 +145,16 @@ public class DBService {
 		Usuario usuario86 = new Usuario(null, "Matheus Capovilla", "", "", projeto2, null, null, null, null, null);
 		Usuario usuario87 = new Usuario(null, "Matheus de Oliveira", "", "", projeto2, null, null, null, null, null);
 
+		Usuario usuario88 = new Usuario(null, "Karla Teixeira", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario89 = new Usuario(null, "Larissa Lanes", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario90 = new Usuario(null, "Flávio Higor", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario91 = new Usuario(null, "Mirella Moreira Silva", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario92 = new Usuario(null, "Joicy", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario93 = new Usuario(null, "Larissa", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario94 = new Usuario(null, "Luana Nascimento", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario95 = new Usuario(null, "Juliana Bonelli", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario96 = new Usuario(null, "Thainá", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario97 = new Usuario(null, "Beatryz", "", "", projeto1, null, null, null, null, null);
 		
 		Item item1 = new Item(null, "Game of Thrones", "", projeto1, null, null, null, null, null);
 		Item item2 = new Item(null, "Chernobyl", "", projeto1, null, null, null, null, null);
@@ -215,62 +226,22 @@ public class DBService {
 		Tag tag17 = new Tag(null, "Ação", projeto1);
 		Tag tag18 = new Tag(null, "Médico", projeto1);
 		Tag tag19 = new Tag(null, "Romance", projeto1);
-		Tag tag20 = new Tag(null, "D.B Weiss", projeto1);
-		Tag tag21 = new Tag(null, "David Benioff", projeto1);
-		Tag tag22 = new Tag(null, "Craig Mazin", projeto1);
-		Tag tag23 = new Tag(null, "Vince Gilligan", projeto1);
-		Tag tag24 = new Tag(null, "Peter Gould", projeto1);
-		Tag tag25 = new Tag(null, "Steven Moffat", projeto1);
-		Tag tag26 = new Tag(null, "Mark Gatiss", projeto1);
-		Tag tag27 = new Tag(null, "Russel T Davis", projeto1);
-		Tag tag28 = new Tag(null, "Chris Chibnall", projeto1);
-		Tag tag29 = new Tag(null, "Sam Levinson", projeto1);
-		Tag tag30 = new Tag(null, "Jeremy Carver", projeto1);
-		Tag tag31 = new Tag(null, "Eric Kripke", projeto1);
-		Tag tag32 = new Tag(null, "Sera Gamble", projeto1);
-		Tag tag33 = new Tag(null, "Shonda Rhimes", projeto1);
-		Tag tag34 = new Tag(null, "Betsy Beers", projeto1);
-		Tag tag35 = new Tag(null, "Krista Vernoff", projeto1);
-		Tag tag36 = new Tag(null, "David Crane", projeto1);
-		Tag tag37 = new Tag(null, "Marta Kauffman", projeto1);
-		Tag tag38 = new Tag(null, "Matt Duffer", projeto1);
-		Tag tag39 = new Tag(null, "Ross Duffer", projeto1);
-		Tag tag40 = new Tag(null, "Michael Hirst", projeto1);
-		Tag tag41 = new Tag(null, "Peter Nowalk", projeto1);
-		Tag tag42 = new Tag(null, "Paul Sheuring", projeto1);
-		Tag tag43 = new Tag(null, "Drew Goddard", projeto1);
-		Tag tag44 = new Tag(null, "Steven S. DeKnight", projeto1);
-		Tag tag45 = new Tag(null, "Craig Thomas", projeto1);
-		Tag tag46 = new Tag(null, "Carter Bays", projeto1);
-		Tag tag47 = new Tag(null, "Beau Willimon", projeto1);
-		Tag tag48 = new Tag(null, "Melissa James Gibson", projeto1);
-		Tag tag49 = new Tag(null, "Frank Pugliese", projeto1);
-		Tag tag50 = new Tag(null, "David Shore", projeto1);
-		Tag tag51 = new Tag(null, "Kurt Sutter", projeto1);
-		Tag tag52 = new Tag(null, "Julie Plec", projeto1);
-		Tag tag53 = new Tag(null, "Kevin Williamson", projeto1);
-		Tag tag54 = new Tag(null, "Frank Darabont", projeto1);
-		Tag tag55 = new Tag(null, "Glen Mazzara", projeto1);
-		Tag tag56 = new Tag(null, "Scott M. Gimple", projeto1);
-		Tag tag57 = new Tag(null, "Aléx Pina", projeto1);
-		Tag tag58 = new Tag(null, "Daniel Écija", projeto1);
-		Tag tag59 = new Tag(null, "Iván Escobar", projeto1);
-		Tag tag60 = new Tag(null, "Jamie Brittain", projeto1);
-		Tag tag61 = new Tag(null, "Bryan Elsley", projeto1);
-		Tag tag62 = new Tag(null, "Roberto Aguirre-Sacasa", projeto1);
-		Tag tag63 = new Tag(null, "Jason Rothenberg", projeto1);
-		Tag tag64 = new Tag(null, "Tom Kapinos", projeto1);
-		Tag tag65 = new Tag(null, "Joe Henderson", projeto1);
-		Tag tag66 = new Tag(null, "Marin Gero", projeto1);
-		Tag tag67 = new Tag(null, "Jenji Kohan", projeto1);
+		
+		Tag tag20 = new Tag(null, "Amigos", projeto1);
+		Tag tag21 = new Tag(null, "Sobrenatural", projeto1);
+		Tag tag22 = new Tag(null, "Mistério", projeto1);
+		Tag tag23 = new Tag(null, "Prisão", projeto1);
+		Tag tag24 = new Tag(null, "Drogas", projeto1);
+		Tag tag25 = new Tag(null, "Radiação", projeto1);
+		Tag tag26 = new Tag(null, "Familia", projeto1);
+		Tag tag27 = new Tag(null, "Herói", projeto1);
+		Tag tag28 = new Tag(null, "TV-PG", projeto1);
+		Tag tag29 = new Tag(null, "TV-14", projeto1);
+		Tag tag30 = new Tag(null, "TV-MA", projeto1);
+		
 		Tag tag68 = new Tag(null, "15-34 min", projeto1);
 		Tag tag69 = new Tag(null, "35-60 min", projeto1);
 		Tag tag70 = new Tag(null, "61+ min", projeto1);
-		Tag tag71 = new Tag(null, "EUA", projeto1);
-		Tag tag72 = new Tag(null, "Alemanha", projeto1);
-		Tag tag73 = new Tag(null, "Reino Unido", projeto1);
-		Tag tag74 = new Tag(null, "Irlanda", projeto1);
-		Tag tag75 = new Tag(null, "Espanha", projeto1);
 		
 		Tag tag76 = new Tag(null, "Facil", projeto2);
 		Tag tag77 = new Tag(null, "Média", projeto2);
@@ -285,34 +256,35 @@ public class DBService {
 		ItemTag itemTag2 = new ItemTag(item1, tag6);
 		ItemTag itemTag3 = new ItemTag(item1, tag7);
 		ItemTag itemTag4 = new ItemTag(item1, tag8);
-		ItemTag itemTag5 = new ItemTag(item1, tag20);
-		ItemTag itemTag6 = new ItemTag(item1, tag21);
+		ItemTag itemTag5 = new ItemTag(item1, tag17);
+		ItemTag itemTag6 = new ItemTag(item1, tag10);
 		ItemTag itemTag7 = new ItemTag(item1, tag69);
-		ItemTag itemTag8 = new ItemTag(item1, tag71);
+		ItemTag itemTag8 = new ItemTag(item1, tag30);
 		
 		ItemTag itemTag9 = new ItemTag(item2, tag6);
 		ItemTag itemTag10 = new ItemTag(item2, tag7);
-		ItemTag itemTag11 = new ItemTag(item2, tag22);
+		ItemTag itemTag11 = new ItemTag(item2, tag16);
 		ItemTag itemTag12 = new ItemTag(item2, tag69);
-		ItemTag itemTag13 = new ItemTag(item2, tag71);
-		ItemTag itemTag14 = new ItemTag(item2, tag72);
-		ItemTag itemTag15 = new ItemTag(item2, tag73);
+		ItemTag itemTag13 = new ItemTag(item2, tag15);
+		ItemTag itemTag14 = new ItemTag(item2, tag25);
+		ItemTag itemTag15 = new ItemTag(item2, tag30);
 		
 		ItemTag itemTag16 = new ItemTag(item3, tag4);
 		ItemTag itemTag17 = new ItemTag(item3, tag5);
 		ItemTag itemTag18 = new ItemTag(item3, tag7);
-		ItemTag itemTag19 = new ItemTag(item3, tag23);
+		ItemTag itemTag19 = new ItemTag(item3, tag13);
 		ItemTag itemTag20 = new ItemTag(item3, tag69);
-		ItemTag itemTag21 = new ItemTag(item3, tag71);
+		ItemTag itemTag287 = new ItemTag(item3, tag15);
+		ItemTag itemTag288 = new ItemTag(item3, tag24);
+		ItemTag itemTag289 = new ItemTag(item3, tag30);
 		
 		ItemTag itemTag22 = new ItemTag(item4, tag5);
 		ItemTag itemTag23 = new ItemTag(item4, tag6);
 		ItemTag itemTag24 = new ItemTag(item4, tag9);
 		ItemTag itemTag25 = new ItemTag(item4, tag7);
-		ItemTag itemTag26 = new ItemTag(item4, tag23);
-		ItemTag itemTag27 = new ItemTag(item4, tag24);
+		ItemTag itemTag26 = new ItemTag(item4, tag13);
+		ItemTag itemTag27 = new ItemTag(item4, tag30);
 		ItemTag itemTag28 = new ItemTag(item4, tag69);
-		ItemTag itemTag29 = new ItemTag(item4, tag71);
 		
 		ItemTag itemTag30 = new ItemTag(item5, tag4);
 		ItemTag itemTag31 = new ItemTag(item5, tag5);
@@ -320,10 +292,10 @@ public class DBService {
 		ItemTag itemTag33 = new ItemTag(item5, tag10);
 		ItemTag itemTag34 = new ItemTag(item5, tag7);
 		ItemTag itemTag35 = new ItemTag(item5, tag11);
-		ItemTag itemTag36 = new ItemTag(item5, tag25);
-		ItemTag itemTag37 = new ItemTag(item5, tag26);
+		ItemTag itemTag36 = new ItemTag(item5, tag13);
+		ItemTag itemTag37 = new ItemTag(item5, tag22);
 		ItemTag itemTag38 = new ItemTag(item5, tag70);
-		ItemTag itemTag39 = new ItemTag(item5, tag73);
+		ItemTag itemTag290 = new ItemTag(item5, tag29);
 		
 
 		ItemTag itemTag40 = new ItemTag(item6, tag3);
@@ -332,17 +304,17 @@ public class DBService {
 		ItemTag itemTag43 = new ItemTag(item6, tag6);
 		ItemTag itemTag44 = new ItemTag(item6, tag10);
 		ItemTag itemTag45 = new ItemTag(item6, tag12);
-		ItemTag itemTag46 = new ItemTag(item6, tag27);
-		ItemTag itemTag47 = new ItemTag(item6, tag25);
+		ItemTag itemTag46 = new ItemTag(item6, tag7);
+		ItemTag itemTag47 = new ItemTag(item6, tag26);
 		ItemTag itemTag48 = new ItemTag(item6, tag28);
 		ItemTag itemTag49 = new ItemTag(item6, tag69);
-		ItemTag itemTag50 = new ItemTag(item6, tag73);
 		
 		ItemTag itemTag51 = new ItemTag(item7, tag6);
 		ItemTag itemTag52 = new ItemTag(item7, tag7);
-		ItemTag itemTag53 = new ItemTag(item7, tag29);
+		ItemTag itemTag53 = new ItemTag(item7, tag24);
 		ItemTag itemTag54 = new ItemTag(item7, tag69);
-		ItemTag itemTag55 = new ItemTag(item7, tag71);
+		ItemTag itemTag291 = new ItemTag(item7, tag30);
+		ItemTag itemTag292 = new ItemTag(item7, tag20);
 		
 		ItemTag itemTag56 = new ItemTag(item8, tag3);
 		ItemTag itemTag57 = new ItemTag(item8, tag4);
@@ -351,61 +323,58 @@ public class DBService {
 		ItemTag itemTag60 = new ItemTag(item8, tag7);
 		ItemTag itemTag61 = new ItemTag(item8, tag14);
 		ItemTag itemTag62 = new ItemTag(item8, tag8);
-		ItemTag itemTag63 = new ItemTag(item8, tag30);
-		ItemTag itemTag64 = new ItemTag(item8, tag31);
-		ItemTag itemTag65 = new ItemTag(item8, tag32);
+		ItemTag itemTag63 = new ItemTag(item8, tag21);
+		ItemTag itemTag64 = new ItemTag(item8, tag29);
 		ItemTag itemTag66 = new ItemTag(item8, tag69);
-		ItemTag itemTag67 = new ItemTag(item8, tag71);
 		
+		ItemTag itemTag65 = new ItemTag(item9, tag19);
 		ItemTag itemTag68 = new ItemTag(item9, tag3);
 		ItemTag itemTag69 = new ItemTag(item9, tag4);
 		ItemTag itemTag70 = new ItemTag(item9, tag5);
 		ItemTag itemTag71 = new ItemTag(item9, tag6);
 		ItemTag itemTag72 = new ItemTag(item9, tag7);
 		ItemTag itemTag73 = new ItemTag(item9, tag18);
-		ItemTag itemTag74 = new ItemTag(item9, tag33);
-		ItemTag itemTag75 = new ItemTag(item9, tag34);
-		ItemTag itemTag76 = new ItemTag(item9, tag35);
+		ItemTag itemTag74 = new ItemTag(item9, tag29);
 		ItemTag itemTag77 = new ItemTag(item9, tag69);
-		ItemTag itemTag78 = new ItemTag(item9, tag71);
 		
+
+		ItemTag itemTag75 = new ItemTag(item10, tag19);
+		ItemTag itemTag76 = new ItemTag(item10, tag20);
 		ItemTag itemTag79 = new ItemTag(item10, tag1);
 		ItemTag itemTag80 = new ItemTag(item10, tag2);
 		ItemTag itemTag81 = new ItemTag(item10, tag3);
 		ItemTag itemTag82 = new ItemTag(item10, tag9);
-		ItemTag itemTag83 = new ItemTag(item10, tag36);
-		ItemTag itemTag84 = new ItemTag(item10, tag37);
+		ItemTag itemTag83 = new ItemTag(item10, tag29);
 		ItemTag itemTag85 = new ItemTag(item10, tag68);
-		ItemTag itemTag86 = new ItemTag(item10, tag71);
-		
+
+		ItemTag itemTag84 = new ItemTag(item11, tag14);
 		ItemTag itemTag87 = new ItemTag(item11, tag6);
 		ItemTag itemTag88 = new ItemTag(item11, tag7);
 		ItemTag itemTag89 = new ItemTag(item11, tag8);
 		ItemTag itemTag90 = new ItemTag(item11, tag15);
-		ItemTag itemTag91 = new ItemTag(item11, tag38);
-		ItemTag itemTag92 = new ItemTag(item11, tag39);
+		ItemTag itemTag91 = new ItemTag(item11, tag20);
+		ItemTag itemTag92 = new ItemTag(item11, tag21);
 		ItemTag itemTag93 = new ItemTag(item11, tag69);
-		ItemTag itemTag94 = new ItemTag(item11, tag71);
+		ItemTag itemTag293 = new ItemTag(item11, tag29);
 		
 		ItemTag itemTag95 = new ItemTag(item12, tag5);
 		ItemTag itemTag96 = new ItemTag(item12, tag6);
 		ItemTag itemTag97 = new ItemTag(item12, tag10);
 		ItemTag itemTag98 = new ItemTag(item12, tag7);
 		ItemTag itemTag99 = new ItemTag(item12, tag16);
-		ItemTag itemTag100 = new ItemTag(item12, tag40);
+		ItemTag itemTag100 = new ItemTag(item12, tag17);
 		ItemTag itemTag101 = new ItemTag(item12, tag69);
-		ItemTag itemTag102 = new ItemTag(item12, tag71);
-		ItemTag itemTag103 = new ItemTag(item12, tag73);
-		ItemTag itemTag104 = new ItemTag(item12, tag74);
+		ItemTag itemTag294 = new ItemTag(item12, tag30);
 		
 		ItemTag itemTag105 = new ItemTag(item13, tag5);		
 		ItemTag itemTag106 = new ItemTag(item13, tag6);
 		ItemTag itemTag107 = new ItemTag(item13, tag7);
 		ItemTag itemTag108 = new ItemTag(item13, tag15);
 		ItemTag itemTag109 = new ItemTag(item13, tag13);
-		ItemTag itemTag110 = new ItemTag(item13, tag41);
+		ItemTag itemTag110 = new ItemTag(item13, tag22);
 		ItemTag itemTag111 = new ItemTag(item13, tag69);
-		ItemTag itemTag112 = new ItemTag(item13, tag71);
+		ItemTag itemTag295 = new ItemTag(item13, tag20);
+		ItemTag itemTag296 = new ItemTag(item13, tag29);
 		
 		ItemTag itemTag113 = new ItemTag(item14, tag3);
 		ItemTag itemTag114 = new ItemTag(item14, tag4);
@@ -413,155 +382,160 @@ public class DBService {
 		ItemTag itemTag116 = new ItemTag(item14, tag6);
 		ItemTag itemTag117 = new ItemTag(item14, tag7);
 		ItemTag itemTag118 = new ItemTag(item14, tag15);
-		ItemTag itemTag119 = new ItemTag(item14, tag42);
+		ItemTag itemTag119 = new ItemTag(item14, tag17);
 		ItemTag itemTag120 = new ItemTag(item14, tag69);
-		ItemTag itemTag121 = new ItemTag(item14, tag71);
+		ItemTag itemTag297 = new ItemTag(item14, tag13);
+		ItemTag itemTag298 = new ItemTag(item14, tag23);
+		ItemTag itemTag299 = new ItemTag(item14, tag29);
 		
 		ItemTag itemTag122 = new ItemTag(item15, tag5);
 		ItemTag itemTag123 = new ItemTag(item15, tag6);
 		ItemTag itemTag124 = new ItemTag(item15, tag7);
 		ItemTag itemTag125 = new ItemTag(item15, tag8);
 		ItemTag itemTag126 = new ItemTag(item15, tag17);
-		ItemTag itemTag127 = new ItemTag(item15, tag43);
-		ItemTag itemTag128 = new ItemTag(item15, tag44);
+		ItemTag itemTag127 = new ItemTag(item15, tag13);
+		ItemTag itemTag128 = new ItemTag(item15, tag27);
 		ItemTag itemTag129 = new ItemTag(item15, tag69);
-		ItemTag itemTag130 = new ItemTag(item15, tag71);
+		ItemTag itemTag300 = new ItemTag(item15, tag30);
 		
 		ItemTag itemTag131 = new ItemTag(item16, tag3);
 		ItemTag itemTag132 = new ItemTag(item16, tag4);
 		ItemTag itemTag133 = new ItemTag(item16, tag5);
 		ItemTag itemTag134 = new ItemTag(item16, tag9);
-		ItemTag itemTag135 = new ItemTag(item16, tag45);
-		ItemTag itemTag136 = new ItemTag(item16, tag46);
+		ItemTag itemTag135 = new ItemTag(item16, tag19);
+		ItemTag itemTag136 = new ItemTag(item16, tag20);
 		ItemTag itemTag137 = new ItemTag(item16, tag68);
-		ItemTag itemTag138 = new ItemTag(item16, tag71);
+		ItemTag itemTag301 = new ItemTag(item16, tag29);
 
 		ItemTag itemTag139 = new ItemTag(item17, tag5);
 		ItemTag itemTag140 = new ItemTag(item17, tag6);
 		ItemTag itemTag141 = new ItemTag(item17, tag7);
 		ItemTag itemTag142 = new ItemTag(item17, tag15);
-		ItemTag itemTag143 = new ItemTag(item17, tag47);
-		ItemTag itemTag144 = new ItemTag(item17, tag48);
-		ItemTag itemTag145 = new ItemTag(item17, tag49);
+		ItemTag itemTag143 = new ItemTag(item17, tag30);
 		ItemTag itemTag146 = new ItemTag(item17, tag69);
-		ItemTag itemTag147 = new ItemTag(item17, tag71);
-		
+
+		ItemTag itemTag144 = new ItemTag(item18, tag22);
+		ItemTag itemTag145 = new ItemTag(item18, tag29);
 		ItemTag itemTag148 = new ItemTag(item18, tag3);
 		ItemTag itemTag149 = new ItemTag(item18, tag4);
 		ItemTag itemTag150 = new ItemTag(item18, tag5);
 		ItemTag itemTag151 = new ItemTag(item18, tag9);
 		ItemTag itemTag152 = new ItemTag(item18, tag7);
 		ItemTag itemTag153 = new ItemTag(item18, tag18);
-		ItemTag itemTag154 = new ItemTag(item18, tag50);
 		ItemTag itemTag155 = new ItemTag(item18, tag69);
-		ItemTag itemTag156 = new ItemTag(item18, tag71);
-		
+
+		ItemTag itemTag154 = new ItemTag(item19, tag13);
 		ItemTag itemTag157 = new ItemTag(item19, tag4);
 		ItemTag itemTag158 = new ItemTag(item19, tag5);
 		ItemTag itemTag159 = new ItemTag(item19, tag7);
 		ItemTag itemTag160 = new ItemTag(item19, tag11);
 		ItemTag itemTag161 = new ItemTag(item19, tag15);
-		ItemTag itemTag162 = new ItemTag(item19, tag51);
+		ItemTag itemTag162 = new ItemTag(item19, tag20);
 		ItemTag itemTag163 = new ItemTag(item19, tag69);
-		ItemTag itemTag164 = new ItemTag(item19, tag71);
+		ItemTag itemTag302 = new ItemTag(item19, tag30);
 	
 		ItemTag itemTag165 = new ItemTag(item20, tag5);
 		ItemTag itemTag166 = new ItemTag(item20, tag6);
 		ItemTag itemTag167 = new ItemTag(item20, tag7);
 		ItemTag itemTag168 = new ItemTag(item20, tag14);
 		ItemTag itemTag169 = new ItemTag(item20, tag8);
-		ItemTag itemTag170 = new ItemTag(item20, tag52);
+		ItemTag itemTag170 = new ItemTag(item20, tag21);
 		ItemTag itemTag171 = new ItemTag(item20, tag69);
-		ItemTag itemTag172 = new ItemTag(item20, tag71);
-		
+		ItemTag itemTag303 = new ItemTag(item20, tag29);
+	
 		ItemTag itemTag173 = new ItemTag(item21, tag4);
 		ItemTag itemTag174 = new ItemTag(item21, tag5);
 		ItemTag itemTag175 = new ItemTag(item21, tag6);
 		ItemTag itemTag176 = new ItemTag(item21, tag7);
 		ItemTag itemTag177 = new ItemTag(item21, tag8);
 		ItemTag itemTag178 = new ItemTag(item21, tag19);
-		ItemTag itemTag179 = new ItemTag(item21, tag52);
-		ItemTag itemTag180 = new ItemTag(item21, tag53);
+		ItemTag itemTag179 = new ItemTag(item21, tag14);
+		ItemTag itemTag180 = new ItemTag(item21, tag21);
 		ItemTag itemTag181 = new ItemTag(item21, tag69);
-		ItemTag itemTag182 = new ItemTag(item21, tag71);
+		ItemTag itemTag304 = new ItemTag(item21, tag29);
 		
 		ItemTag itemTag183 = new ItemTag(item22, tag4);
 		ItemTag itemTag184 = new ItemTag(item22, tag5);
 		ItemTag itemTag185 = new ItemTag(item22, tag6);
 		ItemTag itemTag186 = new ItemTag(item22, tag7);
 		ItemTag itemTag187 = new ItemTag(item22, tag14);
-		ItemTag itemTag188 = new ItemTag(item22, tag54);
-		ItemTag itemTag189 = new ItemTag(item22, tag55);
-		ItemTag itemTag190 = new ItemTag(item22, tag56);
+		ItemTag itemTag188 = new ItemTag(item22, tag15);
+		ItemTag itemTag189 = new ItemTag(item22, tag21);
+		ItemTag itemTag190 = new ItemTag(item22, tag30);
 		ItemTag itemTag191 = new ItemTag(item22, tag69);
-		ItemTag itemTag192 = new ItemTag(item22, tag71);
 		
 		ItemTag itemTag193 = new ItemTag(item23, tag6);
 		ItemTag itemTag194 = new ItemTag(item23, tag7);
 		ItemTag itemTag195 = new ItemTag(item23, tag15);
-		ItemTag itemTag196 = new ItemTag(item23, tag57);  
+		ItemTag itemTag196 = new ItemTag(item23, tag17);  
 		ItemTag itemTag197 = new ItemTag(item23, tag69);
-		ItemTag itemTag198 = new ItemTag(item23, tag75);
+		ItemTag itemTag305 = new ItemTag(item23, tag13);
+		ItemTag itemTag306 = new ItemTag(item23, tag22);
+		ItemTag itemTag307 = new ItemTag(item23, tag30);
 		
 		ItemTag itemTag199 = new ItemTag(item24, tag5);  
-		ItemTag itemTag200 = new ItemTag(item24, tag5);
+		ItemTag itemTag200 = new ItemTag(item24, tag6);
 		ItemTag itemTag201 = new ItemTag(item24, tag7);
 		ItemTag itemTag202 = new ItemTag(item24, tag15);
-		ItemTag itemTag203 = new ItemTag(item24, tag58);
-		ItemTag itemTag204 = new ItemTag(item24, tag57);
-		ItemTag itemTag205 = new ItemTag(item24, tag59);
+		ItemTag itemTag203 = new ItemTag(item24, tag23);
+		ItemTag itemTag204 = new ItemTag(item24, tag30);
 		ItemTag itemTag206 = new ItemTag(item24, tag70);
-		ItemTag itemTag207 = new ItemTag(item24, tag75);
-		
+		ItemTag itemTag283 = new ItemTag(item24, tag13);
+		ItemTag itemTag284 = new ItemTag(item24, tag17);
+
+		ItemTag itemTag205 = new ItemTag(item25, tag24);
 		ItemTag itemTag208 = new ItemTag(item25, tag4);
 		ItemTag itemTag209 = new ItemTag(item25, tag5);
 		ItemTag itemTag210 = new ItemTag(item25, tag7);
-		ItemTag itemTag211 = new ItemTag(item25, tag60);
-		ItemTag itemTag212 = new ItemTag(item25, tag61);
+		ItemTag itemTag211 = new ItemTag(item25, tag20);
+		ItemTag itemTag212 = new ItemTag(item25, tag30);
 		ItemTag itemTag213 = new ItemTag(item25, tag69);
-		ItemTag itemTag214 = new ItemTag(item25, tag73);
 		
 		ItemTag itemTag215 = new ItemTag(item26, tag6);
 		ItemTag itemTag216 = new ItemTag(item26, tag7);
 		ItemTag itemTag217 = new ItemTag(item26, tag15);
-		ItemTag itemTag218 = new ItemTag(item26, tag62);
+		ItemTag itemTag218 = new ItemTag(item26, tag13);
 		ItemTag itemTag219 = new ItemTag(item26, tag69);
-		ItemTag itemTag220 = new ItemTag(item26, tag71);
+		ItemTag itemTag308 = new ItemTag(item26, tag22);
+		ItemTag itemTag309 = new ItemTag(item26, tag29);
 		
 		ItemTag itemTag221 = new ItemTag(item27, tag5);
 		ItemTag itemTag222 = new ItemTag(item27, tag6);
 		ItemTag itemTag223 = new ItemTag(item27, tag10);
 		ItemTag itemTag224 = new ItemTag(item27, tag7);
 		ItemTag itemTag225 = new ItemTag(item27, tag12);
-		ItemTag itemTag226 = new ItemTag(item27, tag63);
+		ItemTag itemTag226 = new ItemTag(item27, tag22);
 		ItemTag itemTag227 = new ItemTag(item27, tag69);
-		ItemTag itemTag228 = new ItemTag(item27, tag71);
+		ItemTag itemTag310 = new ItemTag(item27, tag25);
+		ItemTag itemTag311 = new ItemTag(item27, tag20);
+		ItemTag itemTag312 = new ItemTag(item27, tag29);
 		
 		ItemTag itemTag229 = new ItemTag(item28, tag6);
 		ItemTag itemTag230 = new ItemTag(item28, tag7);
 		ItemTag itemTag231 = new ItemTag(item28, tag8);
 		ItemTag itemTag232 = new ItemTag(item28, tag11);
-		ItemTag itemTag233 = new ItemTag(item28, tag64);
-		ItemTag itemTag234 = new ItemTag(item28, tag65);
+		ItemTag itemTag233 = new ItemTag(item28, tag13);
+		ItemTag itemTag234 = new ItemTag(item28, tag29);
 		ItemTag itemTag235 = new ItemTag(item28, tag69);
-		ItemTag itemTag236 = new ItemTag(item28, tag71);
 		
 		ItemTag itemTag237 = new ItemTag(item29, tag5);
 		ItemTag itemTag238 = new ItemTag(item29, tag6);
 		ItemTag itemTag239 = new ItemTag(item29, tag7);
 		ItemTag itemTag240 = new ItemTag(item29, tag15);
 		ItemTag itemTag241 = new ItemTag(item29, tag17);
-		ItemTag itemTag242 = new ItemTag(item29, tag66);
+		ItemTag itemTag242 = new ItemTag(item29, tag13);
 		ItemTag itemTag243 = new ItemTag(item29, tag69);
-		ItemTag itemTag244 = new ItemTag(item29, tag71);
+		ItemTag itemTag313 = new ItemTag(item29, tag29);
 		
 		ItemTag itemTag245 = new ItemTag(item30, tag5);
 		ItemTag itemTag246 = new ItemTag(item30, tag6);
 		ItemTag itemTag247 = new ItemTag(item30, tag9);
 		ItemTag itemTag248 = new ItemTag(item30, tag7);
-		ItemTag itemTag249 = new ItemTag(item30, tag67);
+		ItemTag itemTag249 = new ItemTag(item30, tag13);
 		ItemTag itemTag250 = new ItemTag(item30, tag69);
-		ItemTag itemTag251 = new ItemTag(item30, tag71);
+		ItemTag itemTag314 = new ItemTag(item30, tag23);
+		ItemTag itemTag315 = new ItemTag(item30, tag24);
+		ItemTag itemTag316 = new ItemTag(item30, tag30);
 		
 		ItemTag itemTag252 = new ItemTag(item31, tag76);
 		ItemTag itemTag253 = new ItemTag(item31, tag81);
@@ -605,34 +579,35 @@ public class DBService {
 		
 		item1.setItens(Arrays.asList(itemTag1, itemTag2, itemTag3, itemTag4, itemTag5, itemTag6, itemTag7, itemTag8));
 		item2.setItens(Arrays.asList(itemTag9, itemTag10, itemTag11, itemTag12, itemTag13, itemTag14, itemTag15));
-		item3.setItens(Arrays.asList(itemTag16, itemTag17, itemTag18, itemTag19, itemTag20, itemTag21));
-		item4.setItens(Arrays.asList(itemTag22, itemTag23, itemTag24, itemTag25, itemTag26, itemTag27, itemTag28, itemTag29));
-		item5.setItens(Arrays.asList(itemTag30, itemTag31, itemTag32, itemTag33, itemTag34, itemTag35, itemTag36, itemTag37, itemTag38, itemTag39));
-		item6.setItens(Arrays.asList(itemTag40, itemTag41, itemTag42, itemTag43, itemTag44, itemTag45, itemTag46, itemTag47, itemTag48, itemTag49, itemTag50));
-		item7.setItens(Arrays.asList(itemTag51, itemTag52, itemTag53, itemTag54, itemTag55));
-		item8.setItens(Arrays.asList(itemTag56, itemTag57, itemTag58, itemTag59, itemTag60, itemTag61, itemTag62, itemTag63, itemTag64, itemTag65, itemTag66, itemTag67));
-		item9.setItens(Arrays.asList(itemTag68, itemTag69, itemTag70, itemTag71, itemTag72, itemTag73, itemTag74, itemTag75, itemTag76, itemTag77, itemTag78));
-		item10.setItens(Arrays.asList(itemTag79, itemTag80, itemTag81, itemTag82, itemTag83, itemTag84, itemTag85, itemTag86));
-		item11.setItens(Arrays.asList(itemTag87, itemTag88, itemTag89, itemTag90, itemTag91, itemTag92, itemTag93, itemTag94));
-		item12.setItens(Arrays.asList(itemTag95, itemTag96, itemTag97, itemTag98, itemTag99, itemTag100, itemTag101, itemTag102, itemTag103, itemTag104));
-		item13.setItens(Arrays.asList(itemTag105, itemTag106, itemTag107, itemTag108, itemTag109, itemTag110, itemTag111, itemTag112));
-		item14.setItens(Arrays.asList(itemTag113, itemTag114, itemTag115, itemTag116, itemTag117, itemTag118, itemTag119, itemTag120, itemTag121));
-		item15.setItens(Arrays.asList(itemTag122, itemTag123, itemTag124, itemTag125, itemTag126, itemTag127, itemTag128, itemTag129, itemTag130));
-		item16.setItens(Arrays.asList(itemTag131, itemTag132, itemTag133, itemTag134, itemTag135, itemTag136, itemTag137, itemTag138));
-		item17.setItens(Arrays.asList(itemTag139, itemTag140, itemTag141, itemTag142, itemTag143, itemTag144, itemTag145, itemTag146, itemTag147));
-		item18.setItens(Arrays.asList(itemTag148, itemTag149, itemTag150, itemTag151, itemTag152, itemTag153, itemTag154, itemTag155, itemTag156));
-		item19.setItens(Arrays.asList(itemTag157, itemTag158, itemTag159, itemTag160, itemTag161, itemTag162, itemTag163, itemTag164));
-		item20.setItens(Arrays.asList(itemTag165, itemTag166, itemTag167, itemTag168, itemTag169, itemTag170, itemTag171, itemTag172));
-		item21.setItens(Arrays.asList(itemTag173, itemTag174, itemTag175, itemTag176, itemTag177, itemTag178, itemTag179, itemTag180, itemTag181, itemTag182));
-		item22.setItens(Arrays.asList(itemTag183, itemTag184, itemTag185, itemTag186, itemTag187, itemTag188, itemTag189, itemTag190, itemTag191, itemTag192));
-		item23.setItens(Arrays.asList(itemTag193, itemTag194, itemTag195, itemTag196, itemTag197, itemTag198));
-		item24.setItens(Arrays.asList(itemTag199, itemTag200, itemTag201, itemTag202, itemTag203, itemTag204, itemTag205, itemTag206, itemTag207));
-		item25.setItens(Arrays.asList(itemTag208, itemTag209, itemTag210, itemTag211, itemTag212, itemTag213, itemTag214));
-		item26.setItens(Arrays.asList(itemTag215, itemTag216, itemTag217, itemTag218, itemTag219, itemTag220));
-		item27.setItens(Arrays.asList(itemTag221, itemTag222, itemTag223, itemTag224, itemTag225, itemTag226, itemTag227, itemTag228));
-		item28.setItens(Arrays.asList(itemTag229, itemTag230, itemTag231, itemTag232, itemTag233, itemTag234, itemTag235, itemTag236));
-		item29.setItens(Arrays.asList(itemTag237, itemTag238, itemTag239, itemTag240, itemTag241, itemTag242, itemTag243, itemTag244));
-		item30.setItens(Arrays.asList(itemTag245, itemTag246, itemTag247, itemTag248, itemTag249, itemTag250, itemTag251));
+		item3.setItens(Arrays.asList(itemTag16, itemTag17, itemTag18, itemTag19, itemTag20));
+		item4.setItens(Arrays.asList(itemTag22, itemTag23, itemTag24, itemTag25, itemTag26, itemTag27, itemTag28));
+		item5.setItens(Arrays.asList(itemTag30, itemTag31, itemTag32, itemTag33, itemTag34, itemTag35, itemTag36, itemTag37, itemTag38));
+		item6.setItens(Arrays.asList(itemTag40, itemTag41, itemTag42, itemTag43, itemTag44, itemTag45, itemTag46, itemTag47, itemTag48, itemTag49));
+		item7.setItens(Arrays.asList(itemTag51, itemTag52, itemTag53, itemTag54));
+		item8.setItens(Arrays.asList(itemTag56, itemTag57, itemTag58, itemTag59, itemTag60, itemTag61, itemTag62, itemTag63, itemTag64, itemTag65, itemTag66));
+		item9.setItens(Arrays.asList(itemTag68, itemTag69, itemTag70, itemTag71, itemTag72, itemTag73, itemTag74, itemTag75, itemTag76, itemTag77));
+		item10.setItens(Arrays.asList(itemTag79, itemTag80, itemTag81, itemTag82, itemTag83, itemTag84, itemTag85));
+		item11.setItens(Arrays.asList(itemTag87, itemTag88, itemTag89, itemTag90, itemTag91, itemTag92, itemTag93));
+		item12.setItens(Arrays.asList(itemTag95, itemTag96, itemTag97, itemTag98, itemTag99, itemTag100, itemTag101));
+		item13.setItens(Arrays.asList(itemTag105, itemTag106, itemTag107, itemTag108, itemTag109, itemTag110, itemTag111));
+		item14.setItens(Arrays.asList(itemTag113, itemTag114, itemTag115, itemTag116, itemTag117, itemTag118, itemTag119, itemTag120));
+		item15.setItens(Arrays.asList(itemTag122, itemTag123, itemTag124, itemTag125, itemTag126, itemTag127, itemTag128, itemTag129));
+		item16.setItens(Arrays.asList(itemTag131, itemTag132, itemTag133, itemTag134, itemTag135, itemTag136, itemTag137));
+		item17.setItens(Arrays.asList(itemTag139, itemTag140, itemTag141, itemTag142, itemTag143, itemTag144, itemTag145, itemTag146));
+		item18.setItens(Arrays.asList(itemTag148, itemTag149, itemTag150, itemTag151, itemTag152, itemTag153, itemTag154, itemTag155));
+		item19.setItens(Arrays.asList(itemTag157, itemTag158, itemTag159, itemTag160, itemTag161, itemTag162, itemTag163));
+		item20.setItens(Arrays.asList(itemTag165, itemTag166, itemTag167, itemTag168, itemTag169, itemTag170, itemTag171));
+		item21.setItens(Arrays.asList(itemTag173, itemTag174, itemTag175, itemTag176, itemTag177, itemTag178, itemTag179, itemTag180, itemTag181));
+		item22.setItens(Arrays.asList(itemTag183, itemTag184, itemTag185, itemTag186, itemTag187, itemTag188, itemTag189, itemTag190, itemTag191));
+		item23.setItens(Arrays.asList(itemTag193, itemTag194, itemTag195, itemTag196, itemTag197));
+		item24.setItens(Arrays.asList(itemTag199, itemTag200, itemTag201, itemTag202, itemTag203, itemTag204, itemTag205, itemTag206, itemTag283, itemTag284));
+		item25.setItens(Arrays.asList(itemTag208, itemTag209, itemTag210, itemTag211, itemTag212, itemTag213));
+		item26.setItens(Arrays.asList(itemTag215, itemTag216, itemTag217, itemTag218, itemTag219));
+		item27.setItens(Arrays.asList(itemTag221, itemTag222, itemTag223, itemTag224, itemTag225, itemTag226, itemTag227));
+		item28.setItens(Arrays.asList(itemTag229, itemTag230, itemTag231, itemTag232, itemTag233, itemTag234, itemTag235));
+		item29.setItens(Arrays.asList(itemTag237, itemTag238, itemTag239, itemTag240, itemTag241, itemTag242, itemTag243));
+		item30.setItens(Arrays.asList(itemTag245, itemTag246, itemTag247, itemTag248, itemTag249, itemTag250));
+		
 		item31.setItens(Arrays.asList(itemTag252, itemTag253, itemTag254));
 		item32.setItens(Arrays.asList(itemTag255, itemTag256, itemTag257, itemTag258));
 		item33.setItens(Arrays.asList(itemTag259, itemTag260, itemTag261, itemTag262));
@@ -1913,7 +1888,161 @@ public class DBService {
 		Avaliacao avaliacao1180 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario87, item37);
 		Avaliacao avaliacao1181 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario87, item38);
 		Avaliacao avaliacao1182 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario87, item39);	
-	
+		
+		Avaliacao avaliacao1183 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario88, item1);
+		Avaliacao avaliacao1184 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario88, item9);
+		Avaliacao avaliacao1185 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario88, item13);
+		Avaliacao avaliacao1186 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario88, item15);
+		Avaliacao avaliacao1187 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario88, item17);
+		Avaliacao avaliacao1188 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario88, item23);
+		Avaliacao avaliacao1189 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario88, item26);
+		Avaliacao avaliacao1190 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario88, item28);
+		Avaliacao avaliacao1191 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario88, item30);
+		
+		Avaliacao avaliacao1192 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario89, item1);
+		Avaliacao avaliacao1193 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario89, item9);
+		Avaliacao avaliacao1194 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario89, item11);
+		Avaliacao avaliacao1195 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario89, item12);
+		Avaliacao avaliacao1196 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario89, item14);
+		Avaliacao avaliacao1197 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario89, item18);
+		Avaliacao avaliacao1198 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario89, item22);
+		Avaliacao avaliacao1199 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario89, item23);
+		Avaliacao avaliacao1200 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario89, item28);
+		Avaliacao avaliacao1201 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario89, item30);
+		
+		Avaliacao avaliacao1202 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario90, item1);
+		Avaliacao avaliacao1203 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario90, item5);
+		Avaliacao avaliacao1204 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario90, item6);
+		Avaliacao avaliacao1205 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario90, item7);
+		Avaliacao avaliacao1206 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item8);
+		Avaliacao avaliacao1207 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario90, item9);
+		Avaliacao avaliacao1208 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item10);
+		Avaliacao avaliacao1209 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario90, item11);
+		Avaliacao avaliacao1210 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario90, item13);
+		Avaliacao avaliacao1211 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item14);
+		Avaliacao avaliacao1212 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario90, item15);
+		Avaliacao avaliacao1213 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario90, item16);
+		Avaliacao avaliacao1214 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item17);
+		Avaliacao avaliacao1215 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item18);
+		Avaliacao avaliacao1216 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario90, item20);
+		Avaliacao avaliacao1217 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item21);
+		Avaliacao avaliacao1218 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item22);
+		Avaliacao avaliacao1219 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item23);
+		Avaliacao avaliacao1220 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario90, item25);
+		Avaliacao avaliacao1221 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item26);
+		Avaliacao avaliacao1222 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item27);
+		Avaliacao avaliacao1223 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario90, item29);
+		Avaliacao avaliacao1224 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario90, item30);
+		
+		Avaliacao avaliacao1225 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario91, item1);
+		Avaliacao avaliacao1226 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario91, item2);
+		Avaliacao avaliacao1227 = new Avaliacao(null, 1.0f, sdf.parse("21/08/2019 10:00"), usuario91, item3);
+		Avaliacao avaliacao1228 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario91, item5);
+		Avaliacao avaliacao1229 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario91, item7);
+		Avaliacao avaliacao1230 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario91, item8);
+		Avaliacao avaliacao1231 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario91, item10);
+		Avaliacao avaliacao1232 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario91, item11);
+		Avaliacao avaliacao1233 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario91, item12);
+		Avaliacao avaliacao1234 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario91, item13);
+		Avaliacao avaliacao1235 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario91, item16);
+		Avaliacao avaliacao1236 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario91, item17);
+		Avaliacao avaliacao1237 = new Avaliacao(null, 1.0f, sdf.parse("21/08/2019 10:00"), usuario91, item23);
+		Avaliacao avaliacao1238 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario91, item25);
+		Avaliacao avaliacao1239 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario91, item30);
+		
+		Avaliacao avaliacao1240 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario92, item1);
+		Avaliacao avaliacao1241 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario92, item2);
+		Avaliacao avaliacao1242 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario92, item5);
+		Avaliacao avaliacao1243 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario92, item6);
+		Avaliacao avaliacao1244 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario92, item7);
+		Avaliacao avaliacao1245 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario92, item9);
+		Avaliacao avaliacao1246 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario92, item10);
+		Avaliacao avaliacao1247 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario92, item11);
+		Avaliacao avaliacao1248 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario92, item12);
+		Avaliacao avaliacao1249 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario92, item15);
+		Avaliacao avaliacao1250 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario92, item20);
+		Avaliacao avaliacao1251 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario92, item21);
+		Avaliacao avaliacao1252 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario92, item22);
+		Avaliacao avaliacao1253 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario92, item23);
+		Avaliacao avaliacao1254 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario92, item25);
+		Avaliacao avaliacao1255 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario92, item26);
+		Avaliacao avaliacao1256 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario92, item27);
+		Avaliacao avaliacao1257 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario92, item28);
+		Avaliacao avaliacao1258 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario92, item29);
+		Avaliacao avaliacao1259 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario92, item30);
+		
+		Avaliacao avaliacao1260 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario93, item9);
+		Avaliacao avaliacao1261 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario93, item10);
+		Avaliacao avaliacao1262 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario93, item11);
+		Avaliacao avaliacao1263 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario93, item14);
+		Avaliacao avaliacao1264 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario93, item23);
+		Avaliacao avaliacao1265 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario93, item24);
+		Avaliacao avaliacao1266 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario93, item26);
+		Avaliacao avaliacao1267 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario93, item27);
+		Avaliacao avaliacao1268 = new Avaliacao(null, 1.0f, sdf.parse("21/08/2019 10:00"), usuario93, item30);
+		
+		Avaliacao avaliacao1269 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario94, item1);
+		Avaliacao avaliacao1270 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario94, item3);
+		Avaliacao avaliacao1271 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario94, item5);
+		Avaliacao avaliacao1272 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario94, item6);
+		Avaliacao avaliacao1273 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario94, item8);
+		Avaliacao avaliacao1274 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario94, item10);
+		Avaliacao avaliacao1275 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario94, item11);
+		Avaliacao avaliacao1276 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario94, item12);
+		Avaliacao avaliacao1277 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario94, item13);
+		Avaliacao avaliacao1278 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario94, item16);
+		Avaliacao avaliacao1279 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario94, item17);
+		Avaliacao avaliacao1280 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario94, item20);
+		Avaliacao avaliacao1281 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario94, item21);
+		Avaliacao avaliacao1282 = new Avaliacao(null, 1.0f, sdf.parse("21/08/2019 10:00"), usuario94, item22);
+		Avaliacao avaliacao1283 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario94, item23);
+		Avaliacao avaliacao1284 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario94, item24);
+		Avaliacao avaliacao1285 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario94, item28);
+		Avaliacao avaliacao1286 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario94, item30);
+		
+		Avaliacao avaliacao1287 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario95, item21);
+		Avaliacao avaliacao1288 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario95, item22);
+		Avaliacao avaliacao1289 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario95, item23);
+		Avaliacao avaliacao1290 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario95, item25);
+		Avaliacao avaliacao1291 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario95, item26);
+		Avaliacao avaliacao1292 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario95, item27);
+		Avaliacao avaliacao1293 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario95, item29);
+		Avaliacao avaliacao1294 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario95, item30);
+		Avaliacao avaliacao1295 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario95, item18);
+		Avaliacao avaliacao1296 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario95, item20);
+		Avaliacao avaliacao1297 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario95, item21);
+		Avaliacao avaliacao1298 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario95, item22);
+		
+		Avaliacao avaliacao1299 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario96, item1);
+		Avaliacao avaliacao1300 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario96, item8);
+		Avaliacao avaliacao1301 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario96, item9);
+		Avaliacao avaliacao1302 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario96, item10);
+		Avaliacao avaliacao1303 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario96, item11);
+		Avaliacao avaliacao1304 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario96, item13);
+		Avaliacao avaliacao1305 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario96, item14);
+		Avaliacao avaliacao1306 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario96, item18);
+		Avaliacao avaliacao1307 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario96, item23);
+		
+		Avaliacao avaliacao1308 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario97, item1);
+		Avaliacao avaliacao1309 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario97, item3);
+		Avaliacao avaliacao1310 = new Avaliacao(null, 1.0f, sdf.parse("21/08/2019 10:00"), usuario97, item4);
+		Avaliacao avaliacao1311 = new Avaliacao(null, 1.0f, sdf.parse("21/08/2019 10:00"), usuario97, item8);
+		Avaliacao avaliacao1312 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario97, item9);
+		Avaliacao avaliacao1313 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario97, item10);
+		Avaliacao avaliacao1314 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario97, item11);
+		Avaliacao avaliacao1315 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario97, item14);
+		Avaliacao avaliacao1316 = new Avaliacao(null, 1.0f, sdf.parse("21/08/2019 10:00"), usuario97, item16);
+		Avaliacao avaliacao1317 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario97, item21);
+		Avaliacao avaliacao1318 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario97, item22);
+		Avaliacao avaliacao1319 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario97, item23);
+		Avaliacao avaliacao1320 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario97, item24);
+		Avaliacao avaliacao1321 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario97, item26);
+		Avaliacao avaliacao1322 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario97, item27);
+		Avaliacao avaliacao1323 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario97, item28);
+		Avaliacao avaliacao1324 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario97, item30);
+		
+		
+		
 			
 		gerenteRepository.save(Arrays.asList(gerente1));
 
@@ -1927,7 +2056,8 @@ public class DBService {
 				usuario51, usuario52, usuario53, usuario54, usuario55, usuario56, usuario57, usuario58, usuario59, usuario60,
 				usuario61, usuario62, usuario63, usuario64, usuario65, usuario66, usuario67, usuario68, usuario69, usuario70,
 				usuario71, usuario72, usuario73, usuario74, usuario75, usuario76, usuario77, usuario78, usuario79, usuario80,
-				usuario81, usuario82, usuario83, usuario84, usuario85, usuario86, usuario87
+				usuario81, usuario82, usuario83, usuario84, usuario85, usuario86, usuario87, usuario88, usuario89, usuario90,
+				usuario91, usuario92, usuario93, usuario94, usuario95, usuario96, usuario97
 				));
 
 		itemRepository.save(Arrays.asList(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10,
@@ -1938,43 +2068,43 @@ public class DBService {
 		tagRepository.save(Arrays.asList(tag1, tag2, tag3, tag4, tag5, tag6, tag7, tag8, tag9, tag10,
 				tag11, tag12, tag13, tag14, tag15, tag16, tag17, tag18, tag19, tag20,
 				tag21, tag22, tag23, tag24, tag25, tag26, tag27, tag28, tag29, tag30,
-				tag31, tag32, tag33, tag34, tag35, tag36, tag37, tag38, tag39, tag40,
-				tag41, tag42, tag43, tag44, tag45, tag46, tag47, tag48, tag49, tag50,
-				tag51, tag52, tag53, tag54, tag55, tag56, tag57, tag58, tag59, tag60, 
-				tag61, tag62, tag63, tag64, tag65, tag66, tag67, tag68, tag69, tag70, 
-				tag71, tag72, tag73, tag74, tag75, tag76, tag77, tag78, tag79, tag80, 
+															     tag68, tag69, tag70, 
+												   tag76, tag77, tag78, tag79, tag80, 
 				tag81, tag82, tag83));
 
 		itemTagRepository.save(Arrays.asList(
 				itemTag1, itemTag2, itemTag3, itemTag4, itemTag5, itemTag6, itemTag7, itemTag8, itemTag9, itemTag10,
 				itemTag11, itemTag12, itemTag13, itemTag14, itemTag15, itemTag16, itemTag17, itemTag18, itemTag19, itemTag20,
-				itemTag21, itemTag22, itemTag23, itemTag24, itemTag25, itemTag26, itemTag27, itemTag28, itemTag29, itemTag30,
-				itemTag31, itemTag32, itemTag33, itemTag34, itemTag35, itemTag36, itemTag37, itemTag38, itemTag39, itemTag40,
-				itemTag41, itemTag42, itemTag43, itemTag44, itemTag45, itemTag46, itemTag47, itemTag48, itemTag49, itemTag50,
-				itemTag51, itemTag52, itemTag53, itemTag54, itemTag55, itemTag56, itemTag57, itemTag58, itemTag59, itemTag60,
-				itemTag61, itemTag62, itemTag63, itemTag64, itemTag65, itemTag66, itemTag67, itemTag68, itemTag69, itemTag70,
-				itemTag71, itemTag72, itemTag73, itemTag74, itemTag75, itemTag76, itemTag77, itemTag78, itemTag79, itemTag80,
-				itemTag81, itemTag82, itemTag83, itemTag84, itemTag85, itemTag86, itemTag87, itemTag88, itemTag89, itemTag90,
-				itemTag91, itemTag92, itemTag93, itemTag94, itemTag95, itemTag96, itemTag97, itemTag98, itemTag99, itemTag100,
-				itemTag101, itemTag102, itemTag103, itemTag104, itemTag105, itemTag106, itemTag107, itemTag108, itemTag109, itemTag110,
-				itemTag111, itemTag112, itemTag113, itemTag114, itemTag115, itemTag116, itemTag117, itemTag118, itemTag119, itemTag120,
-				itemTag121, itemTag122, itemTag123, itemTag124, itemTag125, itemTag126, itemTag127, itemTag128, itemTag129, itemTag130,
-				itemTag131, itemTag132, itemTag133, itemTag134, itemTag135, itemTag136, itemTag137, itemTag138, itemTag139, itemTag140,
-				itemTag141, itemTag142, itemTag143, itemTag144, itemTag145, itemTag146, itemTag147, itemTag148, itemTag149, itemTag150,
-				itemTag151, itemTag152, itemTag153, itemTag154, itemTag155, itemTag156, itemTag157, itemTag158, itemTag159, itemTag160,
-				itemTag161, itemTag162, itemTag163, itemTag164, itemTag165, itemTag166, itemTag167, itemTag168, itemTag169, itemTag170,
-				itemTag171, itemTag172, itemTag173, itemTag174, itemTag175, itemTag176, itemTag177, itemTag178, itemTag179, itemTag180,
-				itemTag181, itemTag182, itemTag183, itemTag184, itemTag185, itemTag186, itemTag187, itemTag188, itemTag189, itemTag190,
-				itemTag191, itemTag192, itemTag193, itemTag194, itemTag195, itemTag196, itemTag197, itemTag198, itemTag199, itemTag200,
-				itemTag201, itemTag202, itemTag203, itemTag204, itemTag205, itemTag206, itemTag207, itemTag208, itemTag209, itemTag210,
-				itemTag211, itemTag212, itemTag213, itemTag214, itemTag215, itemTag216, itemTag217, itemTag218, itemTag219, itemTag220,
-				itemTag221, itemTag222, itemTag223, itemTag224, itemTag225, itemTag226, itemTag227, itemTag228, itemTag229, itemTag230,
-				itemTag231, itemTag232, itemTag233, itemTag234, itemTag235, itemTag236, itemTag237, itemTag238, itemTag239, itemTag240,
-				itemTag241, itemTag242, itemTag243, itemTag244, itemTag245, itemTag246, itemTag247, itemTag248, itemTag249, itemTag250,
-				itemTag251, itemTag252, itemTag253, itemTag254, itemTag255, itemTag256, itemTag257, itemTag258, itemTag259, itemTag260,
+						   itemTag22, itemTag23, itemTag24, itemTag25, itemTag26, itemTag27, itemTag28, 		   itemTag30,
+				itemTag31, itemTag32, itemTag33, itemTag34, itemTag35, itemTag36, itemTag37, itemTag38, 		   itemTag40,
+				itemTag41, itemTag42, itemTag43, itemTag44, itemTag45, itemTag46, itemTag47, itemTag48, itemTag49,
+				itemTag51, itemTag52, itemTag53, itemTag54, 		   itemTag56, itemTag57, itemTag58, itemTag59, itemTag60,
+				itemTag61, itemTag62, itemTag63, itemTag64, itemTag65, itemTag66, 			 itemTag68, itemTag69, itemTag70,
+				itemTag71, itemTag72, itemTag73, itemTag74, itemTag75, itemTag76, itemTag77, 			itemTag79, itemTag80,
+				itemTag81, itemTag82, itemTag83, itemTag84, itemTag85,			  itemTag87, itemTag88, itemTag89, itemTag90,
+				itemTag91, itemTag92, itemTag93, 			itemTag95, itemTag96, itemTag97, itemTag98, itemTag99, itemTag100,
+				itemTag101,										itemTag105, itemTag106, itemTag107, itemTag108, itemTag109, itemTag110,
+				itemTag111, 			itemTag113, itemTag114, itemTag115, itemTag116, itemTag117, itemTag118, itemTag119, itemTag120,
+							itemTag122, itemTag123, itemTag124, itemTag125, itemTag126, itemTag127, itemTag128, itemTag129, 
+				itemTag131, itemTag132, itemTag133, itemTag134, itemTag135, itemTag136, itemTag137, 			itemTag139, itemTag140,
+				itemTag141, itemTag142, itemTag143, itemTag144, itemTag145, itemTag146, 			itemTag148, itemTag149, itemTag150,
+				itemTag151, itemTag152, itemTag153, itemTag154, itemTag155, 			itemTag157, itemTag158, itemTag159, itemTag160,
+				itemTag161, itemTag162, itemTag163, 			itemTag165, itemTag166, itemTag167, itemTag168, itemTag169, itemTag170,
+				itemTag171, 			itemTag173, itemTag174, itemTag175, itemTag176, itemTag177, itemTag178, itemTag179, itemTag180,
+				itemTag181, 			itemTag183, itemTag184, itemTag185, itemTag186, itemTag187, itemTag188, itemTag189, itemTag190,
+				itemTag191, 			itemTag193, itemTag194, itemTag195, itemTag196, itemTag197, 			itemTag199, itemTag200,
+				itemTag201, itemTag202, itemTag203, itemTag204, itemTag205, itemTag206, 			itemTag208, itemTag209, itemTag210,
+				itemTag211, itemTag212, itemTag213, 			itemTag215, itemTag216, itemTag217, itemTag218, itemTag219, 
+				itemTag221, itemTag222, itemTag223, itemTag224, itemTag225, itemTag226, itemTag227, 			itemTag229, itemTag230,
+				itemTag231, itemTag232, itemTag233, itemTag234, itemTag235, 			itemTag237, itemTag238, itemTag239, itemTag240,
+				itemTag241, itemTag242, itemTag243, 			itemTag245, itemTag246, itemTag247, itemTag248, itemTag249, itemTag250,
+							itemTag252, itemTag253, itemTag254, itemTag255, itemTag256, itemTag257, itemTag258, itemTag259, itemTag260,
 				itemTag261, itemTag262, itemTag263, itemTag264, itemTag265, itemTag266, itemTag267, itemTag268, itemTag269, itemTag270,
 				itemTag271, itemTag272, itemTag273, itemTag274, itemTag275, itemTag276, itemTag277, itemTag278, itemTag279, itemTag280,
-				itemTag281, itemTag282));
+				itemTag281, itemTag282, itemTag283, itemTag284,							itemTag287, itemTag288, itemTag289, itemTag290,
+				itemTag291, itemTag292, itemTag293, itemTag294, itemTag295, itemTag296, itemTag297, itemTag298, itemTag299, itemTag300,
+				itemTag301, itemTag302, itemTag303, itemTag304, itemTag305, itemTag306, itemTag307, itemTag308, itemTag309, itemTag310,
+				itemTag311, itemTag312, itemTag313, itemTag314, itemTag315, itemTag316));
 
 		avaliacaoRepository.save(Arrays.asList(avaliacao1, avaliacao2, avaliacao3, avaliacao4, avaliacao5, avaliacao6, avaliacao7, avaliacao8, avaliacao9, avaliacao10,
 				avaliacao11, avaliacao12, avaliacao13, avaliacao14, avaliacao15, avaliacao16, avaliacao17, avaliacao18, avaliacao19, avaliacao20,
@@ -2094,7 +2224,21 @@ public class DBService {
 				avaliacao1151, avaliacao1152, avaliacao1153, avaliacao1154, avaliacao1155, avaliacao1156, avaliacao1157, avaliacao1158, avaliacao1159, avaliacao1160,
 				avaliacao1161, avaliacao1162, avaliacao1163, avaliacao1164, avaliacao1165, avaliacao1166, avaliacao1167, avaliacao1168, avaliacao1169, avaliacao1170,
 				avaliacao1171, avaliacao1172, avaliacao1173, avaliacao1174, avaliacao1175, avaliacao1176, avaliacao1177, avaliacao1178, avaliacao1179, avaliacao1180,
-				avaliacao1181, avaliacao1182
+				avaliacao1181, avaliacao1182, avaliacao1183, avaliacao1184, avaliacao1185, avaliacao1186, avaliacao1187, avaliacao1188, avaliacao1189, avaliacao1190,
+				avaliacao1191, avaliacao1192, avaliacao1193, avaliacao1194, avaliacao1195, avaliacao1196, avaliacao1197, avaliacao1198, avaliacao1199, avaliacao1200,
+				avaliacao1201, avaliacao1202, avaliacao1203, avaliacao1204, avaliacao1205, avaliacao1206, avaliacao1207, avaliacao1208, avaliacao1209, avaliacao1210,
+				avaliacao1211, avaliacao1212, avaliacao1213, avaliacao1214, avaliacao1215, avaliacao1216, avaliacao1217, avaliacao1218, avaliacao1219, avaliacao1220,
+				avaliacao1221, avaliacao1222, avaliacao1223, avaliacao1224, avaliacao1225, avaliacao1226, avaliacao1227, avaliacao1228, avaliacao1229, avaliacao1230,
+				avaliacao1231, avaliacao1232, avaliacao1233, avaliacao1234, avaliacao1235, avaliacao1236, avaliacao1237, avaliacao1238, avaliacao1239, avaliacao1240,
+				avaliacao1241, avaliacao1242, avaliacao1243, avaliacao1244, avaliacao1245, avaliacao1246, avaliacao1247, avaliacao1248, avaliacao1249, avaliacao1250,
+				avaliacao1251, avaliacao1252, avaliacao1253, avaliacao1254, avaliacao1255, avaliacao1256, avaliacao1257, avaliacao1258, avaliacao1259, avaliacao1260,
+				avaliacao1261, avaliacao1262, avaliacao1263, avaliacao1264, avaliacao1265, avaliacao1266, avaliacao1267, avaliacao1268, avaliacao1269, avaliacao1270,
+				avaliacao1271, avaliacao1272, avaliacao1273, avaliacao1274, avaliacao1275, avaliacao1276, avaliacao1277, avaliacao1278, avaliacao1279, avaliacao1280,
+				avaliacao1281, avaliacao1282, avaliacao1283, avaliacao1284, avaliacao1285, avaliacao1286, avaliacao1287, avaliacao1288, avaliacao1289, avaliacao1290,
+				avaliacao1291, avaliacao1292, avaliacao1293, avaliacao1294, avaliacao1295, avaliacao1296, avaliacao1297, avaliacao1298, avaliacao1299, avaliacao1300,
+				avaliacao1301, avaliacao1302, avaliacao1303, avaliacao1304, avaliacao1305, avaliacao1306, avaliacao1307, avaliacao1308, avaliacao1309, avaliacao1310,
+				avaliacao1311, avaliacao1312, avaliacao1313, avaliacao1314, avaliacao1315, avaliacao1316, avaliacao1317, avaliacao1318, avaliacao1319, avaliacao1320,
+				avaliacao1321, avaliacao1322, avaliacao1323, avaliacao1324
 				));
 		
 		recomendacaoRepository.save(Arrays.asList());

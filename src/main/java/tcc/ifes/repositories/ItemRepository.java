@@ -14,5 +14,4 @@ public interface ItemRepository extends JpaRepository<Item, Integer>{
 
 	@Transactional(readOnly=true)
 	public List<Item> findByProjeto(Projeto projeto);
-
 }

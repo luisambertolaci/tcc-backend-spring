@@ -1,5 +1,6 @@
 package tcc.ifes.service.algoritmos;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -127,25 +128,32 @@ public class FiltragemConteudoService {
 
 		for (int p = 0; p < colunas; p++) {
 			normalizacao.add(media.get(p) / maximo);
+			System.out.println(p  + " " + media.get(p) / maximo);
 		}
 
 		return normalizacao;
 	}
 
-	public List<Float> distanciaEuclidiana(Integer projeto_id, Integer usuario_id) {
+	public float[][] distanciaEuclidiana(Integer projeto_id, Integer usuario_id) {
+		List<Item> col = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
 		List<Float> normalizacao = normalizacao(projeto_id, usuario_id);
 		int colunas = normalizacao.size();
 		float matriz[][] = matrizConteudo(projeto_id);
 		float somaDistancia = 0.0f;
-		List<Float> distanciaEuclidiana = new ArrayList<>();
-
+		float distanciaEuclidiana[][] = new float[2][col.size()];
+		
+		for (int i = 0; i < col.size(); i++) {
+			distanciaEuclidiana[0][i] = col.get(i).getId();
+			System.out.println(distanciaEuclidiana[0][i]);
+		}
+		
 		for (int i = 1; i < matriz.length; i++) {
 			for (int c = 0; c < colunas; c++) {
 				somaDistancia = somaDistancia + (float) Math.pow(normalizacao.get(c) - matriz[i][c], 2);
 			}
 			somaDistancia = (float) Math.sqrt(somaDistancia);
 			System.out.println("soma completa: " + somaDistancia);
-			distanciaEuclidiana.add(somaDistancia);
+			distanciaEuclidiana[1][i -1] =somaDistancia;
 			somaDistancia = 0.0f;
 			System.out.println("reset: " + somaDistancia);
 		}
@@ -157,7 +165,6 @@ public class FiltragemConteudoService {
 		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
 		List<Tag> col = tagRepository.findByProjeto(projetoRepository.findOne(projeto_id));
 
-		System.out.println(lin);
 		int linhas = lin.size() + 1;
 		int colunas = col.size();
 
@@ -169,7 +176,6 @@ public class FiltragemConteudoService {
 		}
 
 		for (i = 0; i < lin.size(); i++) {
-			//if ((avaliacao = avaliacaoRepository.findByItem(lin.get(i))) == null) {
 				for (ItemTag item : lin.get(i).getItens()) {
 					System.out.println(i + " " + item);
 					item.setTag(tagRepository.findOne(item.getTag().getId()));
@@ -184,6 +190,95 @@ public class FiltragemConteudoService {
 			System.out.println();
 		}
 		return matriz;
+	}
+	
+	public float[][] mediaDistanciaEuclidianaUsuario(Integer projeto_id, Integer usuario_id) {
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
+		List<Item> lin2 = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
+		avaliacao = avaliacaoRepository.findByUsuario(usuarioRepository.findOne(usuario_id));
+		float distancia[][] = distanciaEuclidiana(projeto_id, usuario_id);
+		float somaDistancia = 0.0f;
+		float media105 = 0.0f;
+
+		float mediaDistanciaEuclidianaUsuario[][] = new float[2][avaliacao.size()];
+
+		for (int i = 0; i < avaliacao.size(); i++) {
+			Item item = avaliacao.get(i).getItem();
+			mediaDistanciaEuclidianaUsuario[0][i] = distancia[0][lin.indexOf(item)];
+			mediaDistanciaEuclidianaUsuario[1][i] = distancia[1][lin.indexOf(item)];
+		}
+		
+		for (int p = 0; p < 2; p++) {
+			for (int k = 0; k < avaliacao.size(); k++) {
+				System.out.print(mediaDistanciaEuclidianaUsuario[p][k] + " ");
+			}
+			System.out.println();
+		}
+		
+		for (int p = 1; p < 2; p++) {
+			for (int k = 0; k < avaliacao.size(); k++) {
+				somaDistancia = somaDistancia + (float) mediaDistanciaEuclidianaUsuario[p][k];
+			}
+			somaDistancia = somaDistancia / avaliacao.size();
+			somaDistancia = somaDistancia * 1.05f;
+			System.out.println("soma completa: " + somaDistancia);
+			media105 = somaDistancia;
+		}
+		
+		
+		
+		for (int i = 0; i < avaliacao.size(); i++) {
+			while(lin.contains(avaliacao.get(i).getItem())) {
+				lin.remove(avaliacao.get(i).getItem());
+				System.out.println(lin);
+				System.out.println(lin.size());
+			}
+		}
+		
+		float matrizRecomendacao[][] = new float[2][lin.size()];
+		for(int j = 0; j < lin.size(); j++) {
+			Item item = lin.get(j);
+			if(distancia[1][lin2.indexOf(item)] <= media105) {
+				matrizRecomendacao[0][j] = lin.get(j).getId(); 
+				matrizRecomendacao[1][j] = distancia[1][lin2.indexOf(item)];
+				System.out.println("item " + item + " id " + matrizRecomendacao[0][j] + " nota " + matrizRecomendacao[1][j]);
+			}
+		}
+		
+		
+		return matrizRecomendacao;
+	}
+	
+	public float[][] distanciaEuclidianaManual(Integer projeto_id, Integer usuario_id, float limite) {
+		List<Item> lin = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
+		List<Item> lin2 = itemRepository.findByProjeto(projetoRepository.findOne(projeto_id));
+		avaliacao = avaliacaoRepository.findByUsuario(usuarioRepository.findOne(usuario_id));
+		float distancia[][] = distanciaEuclidiana(projeto_id, usuario_id);
+		DecimalFormat df = new DecimalFormat("0.00");
+		df.format(limite);
+		System.out.println(limite);
+
+		for (int i = 0; i < avaliacao.size(); i++) {
+			while(lin.contains(avaliacao.get(i).getItem())) {
+				lin.remove(avaliacao.get(i).getItem());
+				System.out.println(lin);
+				System.out.println(lin.size());
+			}
+		}
+		
+		float matrizRecomendacao[][] = new float[2][lin.size()];
+		for(int j = 0; j < lin.size(); j++) {
+			Item item = lin.get(j);
+			System.out.println(limite);
+			if(distancia[1][lin2.indexOf(item)] <= limite) {
+				matrizRecomendacao[0][j] = lin.get(j).getId(); 
+				matrizRecomendacao[1][j] = distancia[1][lin2.indexOf(item)];
+				System.out.println("item " + item + " id " + matrizRecomendacao[0][j] + " nota " + matrizRecomendacao[1][j]);
+			}
+		}
+		
+		
+		return matrizRecomendacao;
 	}
 
 }
