@@ -27,7 +27,7 @@ public class FiltragemConteudoResource {
 	 * List<Float> media() { return service.media(projeto_id, usuario_id);
 	 * 
 	 * }
-	 */
+	 
 	@RequestMapping(value = "/normalizacao/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
 	public List<Float> normalizacao(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
 		return service.normalizacao(projeto_id, usuario_id);
@@ -36,7 +36,7 @@ public class FiltragemConteudoResource {
 	@RequestMapping(value = "/distanciaEuclidiana/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
 	public float[][] DistanciaEuclidiana(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
 		return service.distanciaEuclidiana(projeto_id, usuario_id);
-	}
+	}*/
 	
 	@RequestMapping(value = "/mediaDistanciaEuclidianaUsuario/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
 	public float[][] MediaDistanciaEuclidianaUsuario(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
