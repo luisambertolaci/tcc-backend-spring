@@ -14,7 +14,7 @@ import tcc.ifes.model.Recomendacao;
 import tcc.ifes.service.RecomendacaoService;
 
 @RestController
-@RequestMapping(value="/recomendacoes")
+@RequestMapping(value="/recomendacao")
 public class RecomendacaoResource {
 	
 	@Autowired

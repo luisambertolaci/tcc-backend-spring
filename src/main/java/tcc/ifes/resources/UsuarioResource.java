@@ -18,7 +18,7 @@ import tcc.ifes.service.RecomendacaoService;
 import tcc.ifes.service.UsuarioService;
 
 @RestController
-@RequestMapping(value="/usuarios")
+@RequestMapping(value="/usuario")
 public class UsuarioResource {
 
 	@Autowired
@@ -30,17 +30,17 @@ public class UsuarioResource {
 	@Autowired
 	private RecomendacaoService recomendacaoService;
 	
-	/*@RequestMapping(method=RequestMethod.GET)
+	@RequestMapping(method=RequestMethod.GET)
 	public ResponseEntity<List<Usuario>> findAll() {
 		List<Usuario> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
 	
-	/*@RequestMapping(value="/{id}", method=RequestMethod.GET)
+	@RequestMapping(value="/{id}", method=RequestMethod.GET)
 	public ResponseEntity<Usuario> find(@PathVariable Integer id) {
 		Usuario obj = service.find(id);
 		return ResponseEntity.ok().body(obj);
-	}*/
+	}
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Void> insert(@RequestBody Usuario obj) {

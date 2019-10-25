@@ -16,7 +16,7 @@ import tcc.ifes.service.GerenteService;
 import tcc.ifes.service.ProjetoService;
 
 @RestController
-@RequestMapping(value = "/gerentes")
+@RequestMapping(value = "/gerente")
 public class GerenteResource {
 
 	@Autowired

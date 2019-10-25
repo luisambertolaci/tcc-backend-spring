@@ -8,10 +8,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import tcc.ifes.model.Item;
 import tcc.ifes.service.algoritmos.FiltragemConteudoService;
 
 @RestController
-@RequestMapping(value = "/perfis")
+@RequestMapping(value = "/filtragemBaseadaEmConteudo")
 public class FiltragemConteudoResource {
 
 	@Autowired
@@ -38,13 +39,13 @@ public class FiltragemConteudoResource {
 		return service.distanciaEuclidiana(projeto_id, usuario_id);
 	}*/
 	
-	@RequestMapping(value = "/mediaDistanciaEuclidianaUsuario/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
-	public float[][] MediaDistanciaEuclidianaUsuario(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
+	@RequestMapping(value = "/getDistanciaEuclidianaMediaUsuario/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
+	public List<Item> MediaDistanciaEuclidianaUsuario(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
 		return service.mediaDistanciaEuclidianaUsuario(projeto_id, usuario_id);
 	}
 	
-	@RequestMapping(value = "/distanciaEuclidianaManual/{projeto_id}/{usuario_id}/{limite}", method = RequestMethod.GET)
-	public float[][] distanciaEuclidianaManual(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id, @PathVariable float limite) {
+	@RequestMapping(value = "/getDistanciaEuclidianaManual/{projeto_id}/{usuario_id}/{limite}", method = RequestMethod.GET)
+	public List<Item> distanciaEuclidianaManual(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id, @PathVariable float limite) {
 		return service.distanciaEuclidianaManual(projeto_id, usuario_id, limite);
 	}
 

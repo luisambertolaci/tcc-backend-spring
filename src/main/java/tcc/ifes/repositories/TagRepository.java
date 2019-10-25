@@ -12,5 +12,4 @@ public interface TagRepository extends JpaRepository<Tag, Integer>{
 
 	@Transactional(readOnly=true)
 	public List<Tag> findByProjeto(Projeto projeto);
-
 }

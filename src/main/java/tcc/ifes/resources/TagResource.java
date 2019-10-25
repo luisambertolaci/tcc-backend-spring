@@ -14,7 +14,7 @@ import tcc.ifes.model.Tag;
 import tcc.ifes.service.TagService;
 
 @RestController
-@RequestMapping(value="/tags")
+@RequestMapping(value="/tag")
 public class TagResource {
 	
 	@Autowired

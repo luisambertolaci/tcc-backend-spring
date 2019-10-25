@@ -155,6 +155,7 @@ public class DBService {
 		Usuario usuario95 = new Usuario(null, "Juliana Bonelli", "", "", projeto1, null, null, null, null, null);
 		Usuario usuario96 = new Usuario(null, "Thainá", "", "", projeto1, null, null, null, null, null);
 		Usuario usuario97 = new Usuario(null, "Beatryz", "", "", projeto1, null, null, null, null, null);
+		Usuario usuario98 = new Usuario(null, "Igor Leite", "", "", projeto1, null, null, null, null, null);
 		
 		Item item1 = new Item(null, "Game of Thrones", "", projeto1, null, null, null, null, null);
 		Item item2 = new Item(null, "Chernobyl", "", projeto1, null, null, null, null, null);
@@ -2041,6 +2042,18 @@ public class DBService {
 		Avaliacao avaliacao1323 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario97, item28);
 		Avaliacao avaliacao1324 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario97, item30);
 		
+		Avaliacao avaliacao1325 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario98, item2);
+		Avaliacao avaliacao1326 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario98, item3);
+		Avaliacao avaliacao1327 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario98, item4);
+		Avaliacao avaliacao1328 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario98, item10);
+		Avaliacao avaliacao1329 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario98, item11);
+		Avaliacao avaliacao1330 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario98, item12);
+		Avaliacao avaliacao1331 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario98, item16);
+		Avaliacao avaliacao1332 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario98, item18);
+		Avaliacao avaliacao1333 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario98, item19);
+		Avaliacao avaliacao1334 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario98, item22);
+		Avaliacao avaliacao1335 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario98, item23);
+		Avaliacao avaliacao1336 = new Avaliacao(null, 4.0f, sdf.parse("21/08/2019 10:00"), usuario98, item28);
 		
 		
 			
@@ -2057,7 +2070,7 @@ public class DBService {
 				usuario61, usuario62, usuario63, usuario64, usuario65, usuario66, usuario67, usuario68, usuario69, usuario70,
 				usuario71, usuario72, usuario73, usuario74, usuario75, usuario76, usuario77, usuario78, usuario79, usuario80,
 				usuario81, usuario82, usuario83, usuario84, usuario85, usuario86, usuario87, usuario88, usuario89, usuario90,
-				usuario91, usuario92, usuario93, usuario94, usuario95, usuario96, usuario97
+				usuario91, usuario92, usuario93, usuario94, usuario95, usuario96, usuario97, usuario98
 				));
 
 		itemRepository.save(Arrays.asList(item1, item2, item3, item4, item5, item6, item7, item8, item9, item10,
@@ -2238,7 +2251,8 @@ public class DBService {
 				avaliacao1291, avaliacao1292, avaliacao1293, avaliacao1294, avaliacao1295, avaliacao1296, avaliacao1297, avaliacao1298, avaliacao1299, avaliacao1300,
 				avaliacao1301, avaliacao1302, avaliacao1303, avaliacao1304, avaliacao1305, avaliacao1306, avaliacao1307, avaliacao1308, avaliacao1309, avaliacao1310,
 				avaliacao1311, avaliacao1312, avaliacao1313, avaliacao1314, avaliacao1315, avaliacao1316, avaliacao1317, avaliacao1318, avaliacao1319, avaliacao1320,
-				avaliacao1321, avaliacao1322, avaliacao1323, avaliacao1324
+				avaliacao1321, avaliacao1322, avaliacao1323, avaliacao1324, avaliacao1325, avaliacao1326, avaliacao1327, avaliacao1328, avaliacao1329, avaliacao1330,
+				avaliacao1331, avaliacao1332, avaliacao1333, avaliacao1334, avaliacao1335, avaliacao1336
 				));
 		
 		recomendacaoRepository.save(Arrays.asList());

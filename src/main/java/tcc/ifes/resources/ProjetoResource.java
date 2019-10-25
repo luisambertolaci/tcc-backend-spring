@@ -18,7 +18,7 @@ import tcc.ifes.service.ProjetoService;
 import tcc.ifes.service.UsuarioService;
 
 @RestController
-@RequestMapping(value="/projetos")
+@RequestMapping(value="/projeto")
 public class ProjetoResource {
 
 	@Autowired
@@ -60,18 +60,18 @@ public class ProjetoResource {
 		return ResponseEntity.noContent().build();
 	}
 	
-	@RequestMapping(value="/{projeto_id}/usuarios", method=RequestMethod.GET)
-	public ResponseEntity<List<Usuario>> findUsuarios(@PathVariable Integer projeto_id) {
+	@RequestMapping(value="/{id}/usuarios", method=RequestMethod.GET)
+	public ResponseEntity<List<Usuario>> findUsuarios(@PathVariable Integer id) {
 		Projeto projeto = new Projeto();
-		projeto.setId(projeto_id);
+		projeto.setId(id);
 		List<Usuario> list = usuarioService.findByProjeto(projeto);
 		return ResponseEntity.ok().body(list);
 	}
 	
-	@RequestMapping(value="/{projeto_id}/itens", method=RequestMethod.GET)
-	public ResponseEntity<List<Item>> findItens(@PathVariable Integer projeto_id) {
+	@RequestMapping(value="/{id}/itens", method=RequestMethod.GET)
+	public ResponseEntity<List<Item>> findItens(@PathVariable Integer id) {
 		Projeto projeto = new Projeto();
-		projeto.setId(projeto_id);
+		projeto.setId(id);
 		List<Item> list = itemService.findByProjeto(projeto);
 		return ResponseEntity.ok().body(list);
 	}

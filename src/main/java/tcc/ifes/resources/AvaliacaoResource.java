@@ -14,7 +14,7 @@ import tcc.ifes.model.Avaliacao;
 import tcc.ifes.service.AvaliacaoService;
 
 @RestController
-@RequestMapping(value="/avaliacoes")
+@RequestMapping(value="/avaliacao")
 public class AvaliacaoResource {
 
 	@Autowired

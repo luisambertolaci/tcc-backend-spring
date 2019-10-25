@@ -12,20 +12,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import tcc.ifes.model.Avaliacao;
 import tcc.ifes.model.Item;
-import tcc.ifes.model.Recomendacao;
 import tcc.ifes.service.AvaliacaoService;
 import tcc.ifes.service.ItemService;
-import tcc.ifes.service.RecomendacaoService;
 
 @RestController
-@RequestMapping(value="/itens")
+@RequestMapping(value="/item")
 public class ItemResource {
 	
 	@Autowired
 	private ItemService service;
-	
-	@Autowired
-	private RecomendacaoService recomendacaoService;
 	
 	@Autowired
 	private AvaliacaoService avaliacaoService;
@@ -58,14 +53,6 @@ public class ItemResource {
 	public ResponseEntity<Void> delete(@PathVariable Integer id) {
 		service.delete(id);
 		return ResponseEntity.noContent().build();
-	}
-	
-	@RequestMapping(value="/{item_id}/recomendacoes", method=RequestMethod.GET)
-	public ResponseEntity<List<Recomendacao>> findRecomendacoes(@PathVariable Integer item_id) {
-		Item item = new Item();
-		item.setId(item_id);
-		List<Recomendacao> list = recomendacaoService.findByItem(item);
-		return ResponseEntity.ok().body(list);
 	}
 	
 	@RequestMapping(value="/{item_id}/avaliacoes", method=RequestMethod.GET)
