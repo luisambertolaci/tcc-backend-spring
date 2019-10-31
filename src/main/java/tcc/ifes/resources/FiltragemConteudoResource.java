@@ -32,12 +32,12 @@ public class FiltragemConteudoResource {
 	@RequestMapping(value = "/normalizacao/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
 	public List<Float> normalizacao(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
 		return service.normalizacao(projeto_id, usuario_id);
-	}
+	}*/
 
 	@RequestMapping(value = "/distanciaEuclidiana/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
 	public float[][] DistanciaEuclidiana(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
 		return service.distanciaEuclidiana(projeto_id, usuario_id);
-	}*/
+	}
 	
 	@RequestMapping(value = "/getDistanciaEuclidianaMediaUsuario/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
 	public List<Item> MediaDistanciaEuclidianaUsuario(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {

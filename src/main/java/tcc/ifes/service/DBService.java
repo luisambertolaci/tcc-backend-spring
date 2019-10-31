@@ -1890,7 +1890,7 @@ public class DBService {
 		Avaliacao avaliacao1181 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario87, item38);
 		Avaliacao avaliacao1182 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario87, item39);	
 		
-		Avaliacao avaliacao1183 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario88, item1);
+		Avaliacao avaliacao1183 = new Avaliacao(null, 2.0f, sdf.parse("21/08/2019 10:00"), usuario88, item3);
 		Avaliacao avaliacao1184 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario88, item9);
 		Avaliacao avaliacao1185 = new Avaliacao(null, 5.0f, sdf.parse("21/08/2019 10:00"), usuario88, item13);
 		Avaliacao avaliacao1186 = new Avaliacao(null, 3.0f, sdf.parse("21/08/2019 10:00"), usuario88, item15);

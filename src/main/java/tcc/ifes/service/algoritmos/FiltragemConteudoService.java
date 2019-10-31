@@ -219,7 +219,7 @@ public class FiltragemConteudoService {
 				somaDistancia = somaDistancia + (float) mediaDistanciaEuclidianaUsuario[p][k];
 			}
 			somaDistancia = somaDistancia / avaliacao.size();
-			somaDistancia = somaDistancia * 1.01f;
+			somaDistancia = somaDistancia * 1.05f;
 			System.out.println("soma completa: " + somaDistancia);
 			media105 = somaDistancia;
 		}
