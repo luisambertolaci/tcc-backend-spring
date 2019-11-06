@@ -39,15 +39,29 @@ public class FiltragemConteudoResource {
 		return service.distanciaEuclidiana(projeto_id, usuario_id);
 	}
 	
-	@RequestMapping(value = "/getDistanciaEuclidianaMediaUsuario/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/matrizDistanciaEuclidianaProjeto/{projeto_id}", method = RequestMethod.GET)
+	public float[][] DistanciaEuclidianaProjeto(@PathVariable Integer projeto_id) {
+		return service.distanciaEuclidianaProjeto(projeto_id);
+	}
+	
+	@RequestMapping(value = "/getRecomendacaoLimiteUsuario/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
 	public List<Item> MediaDistanciaEuclidianaUsuario(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
 		return service.mediaDistanciaEuclidianaUsuario(projeto_id, usuario_id);
 	}
 	
-	@RequestMapping(value = "/getDistanciaEuclidianaManual/{projeto_id}/{usuario_id}/{limite}", method = RequestMethod.GET)
+	@RequestMapping(value = "/getRecomendacaoLimiteManual/{projeto_id}/{usuario_id}/{limite}", method = RequestMethod.GET)
 	public List<Item> distanciaEuclidianaManual(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id, @PathVariable float limite) {
 		return service.distanciaEuclidianaManual(projeto_id, usuario_id, limite);
 	}
 
+	@RequestMapping(value = "/getMatrizRecomendacaoLimiteManual/{projeto_id}/{limite}", method = RequestMethod.GET)
+	public Object[][] distanciaEuclidianaProjetoManual(@PathVariable Integer projeto_id, @PathVariable float limite) {
+		return service.distanciaEuclidianaProjetoManual(projeto_id, limite);
+	}
+	
+	/*@RequestMapping(value = "/getMatrizRecomendacaoLimiteUsuario/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
+	public List<Item> MediaDistanciaEuclidianaUsuario(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
+		return service.mediaDistanciaEuclidianaUsuario(projeto_id, usuario_id);
+	}*/
 
 }
