@@ -59,9 +59,9 @@ public class FiltragemConteudoResource {
 		return service.distanciaEuclidianaProjetoManual(projeto_id, limite);
 	}
 	
-	/*@RequestMapping(value = "/getMatrizRecomendacaoLimiteUsuario/{projeto_id}/{usuario_id}", method = RequestMethod.GET)
-	public List<Item> MediaDistanciaEuclidianaUsuario(@PathVariable Integer projeto_id, @PathVariable Integer usuario_id) {
-		return service.mediaDistanciaEuclidianaUsuario(projeto_id, usuario_id);
-	}*/
+	@RequestMapping(value = "/getMatrizRecomendacaoLimiteUsuario/{projeto_id}", method = RequestMethod.GET)
+	public Object[][] MediaDistanciaEuclidianaProjetoUsuario(@PathVariable Integer projeto_id) {
+		return service.mediaDistanciaEuclidianaProjetoUsuario(projeto_id);
+	}
 
 }
